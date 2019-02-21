@@ -30,3 +30,6 @@ backend/config/database.yml
 
 # Ignore .env
 .env
+
+# Ignore rvm gemset file
+.ruby-gemset

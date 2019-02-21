@@ -25,6 +25,13 @@ installing the gems under the block :production.
 
 `$ rails db:create`
 `$ rails db:setup`
+`$ rails db:seed`
+
+- Reset and create the database again with everything:
+
+`$ rails db:reset`
+
+
 
 ## How to run the project
 

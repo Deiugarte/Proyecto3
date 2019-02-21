@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - "db/schema.rb" # You can't touch this
+    - "db/migrate/*.rb"
     - ".bundle/**/*" # Auto-generated
     - "bin/**/*"     # Auto-generated
     - "vendor/**/*"  # We cannot solve the world's problems
