@@ -44,6 +44,14 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
       }
     end
 
+    let(:invalid_district) do
+      {
+        district: {
+          name: nil,
+        },
+      }
+    end
+
     context "when the request is valid" do
       before { post :create, params: valid_district, format: :json }
 
@@ -59,6 +67,15 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
       it "validate @district" do
         expect(assigns(:district).name).to match(valid_district[:district][:name])
       end
+    end
+
+    context "when the request is invalid" do
+      before { post :create, params: invalid_district, format: :json }
+
+      it "return status code unprocessable_entity" do
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+
     end
   end
 

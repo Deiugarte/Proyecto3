@@ -1,19 +1,21 @@
 # == Schema Information
 #
-# Table name: categories
+# Table name: people
 #
 #  id         :bigint(8)        not null, primary key
-#  name       :string(255)
+#  first_name :string(255)
+#  last_name  :string(255)
+#  birth_date :date
+#  phone      :string(255)
+#  user_id    :bigint(8)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  ancestry   :string(255)
 #
 
 require "rails_helper"
 
-RSpec.describe Category, type: :model do
+RSpec.describe Person, type: :model do
   describe "#validations" do
-    it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to have_many(:places) }
+    it { is_expected.to belong_to(:user) }
   end
 end

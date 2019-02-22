@@ -68,6 +68,14 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
       }
     end
 
+    let(:invalid_place) do
+      {
+        place: {
+          name: nil,
+        },
+      }
+    end
+
     context "when the request is valid" do
       before { post :create, params: valid_place, format: :json }
 
@@ -83,6 +91,15 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
       it "validate @place" do
         expect(assigns(:place).name).to match(valid_place[:place][:name])
       end
+    end
+
+    context "when the request is invalid" do
+      before { post :create, params: invalid_place, format: :json }
+
+      it "return status code unprocessable_entity" do
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+
     end
   end
 
