@@ -1,12 +1,22 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
-ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
+require "spec_helper"
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../config/environment", __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
+require "rspec/rails"
+require "devise"
+require_relative "support/controller_macros"
+require "simplecov"
 # Add additional requires below this line. Rails is not loaded until this point!
-
+SimpleCov.start do
+  add_group "Controllers", "app/controllers"
+  add_group "Helpers", "app/helpers"
+  add_group "Mailers", "app/mailers"
+  add_group "Models", "app/models"
+  add_group "Jobs", "app/jobs"
+  add_group "Libraries", "app/lib"
+end
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -70,4 +80,7 @@ RSpec.configure do |config|
 
   # Factory Bot
   config.include FactoryBot::Syntax::Methods
+  # Devise config
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.extend ControllerMacros, type: :controller
 end

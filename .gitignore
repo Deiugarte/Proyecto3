@@ -33,3 +33,6 @@ backend/config/database.yml
 
 # Ignore rvm gemset file
 .ruby-gemset
+
+# Ignore rails code coverage
+backend/coverage
