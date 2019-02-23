@@ -1,3 +1,12 @@
+person = Person.new(
+  first_name: "John",
+  last_name: "Doe",
+  birth_date: Faker::Date.birthday(18, 65),
+  phone: Faker::PhoneNumber.phone_number,
+)
+
+User.create(email: "test@example.com", password: "12345678", username: "johndoe", person: person)
+
 7.times { |index| Province.create(name: index + 1) }
 
 5.times do
