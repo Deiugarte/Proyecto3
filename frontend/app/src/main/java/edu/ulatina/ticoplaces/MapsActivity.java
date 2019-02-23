@@ -98,8 +98,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         String bestProvider = String.valueOf(manager.getBestProvider(mCriteria, true));
         @SuppressLint("MissingPermission") Location mLocation = manager.getLastKnownLocation(bestProvider);
 
-        final double currentLatitude = mLocation.getLatitude();
-        final double currentLongitude = mLocation.getLongitude();
+        final double currentLatitude = 0;
+        final double currentLongitude = 0;
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(currentLatitude, currentLongitude), 10));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17), 2000, null);
     }
