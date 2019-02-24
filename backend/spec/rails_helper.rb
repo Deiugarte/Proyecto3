@@ -8,6 +8,7 @@ require "rspec/rails"
 require "devise"
 require_relative "support/controller_macros"
 require "simplecov"
+require "dox"
 # Add additional requires below this line. Rails is not loaded until this point!
 SimpleCov.start do
   add_group "Controllers", "app/controllers"
@@ -49,6 +50,8 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+Dir[Rails.root.join("spec/docs/**/*.rb")].each { |f| require f }
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -78,9 +81,21 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # Documentation
+  config.after(:each, :dox) do |example|
+    example.metadata[:request] = request
+    example.metadata[:response] = response
+  end
+
   # Factory Bot
   config.include FactoryBot::Syntax::Methods
   # Devise config
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.extend ControllerMacros, type: :controller
+end
+
+Dox.configure do |config|
+  config.header_file_path = Rails.root.join("spec/docs/v1/descriptions/header.md")
+  config.desc_folder_path = Rails.root.join("spec/docs/v1/descriptions")
+  config.headers_whitelist = ["Accept"]
 end

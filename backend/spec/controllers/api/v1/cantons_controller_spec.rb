@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::CantonsController, type: :controller do
+  include Docs::V1::Cantons::Api
 
   let(:valid_attributes) do
     {
@@ -17,14 +18,18 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "returns a success response" do
+    include Docs::V1::Cantons::Index
+
+    it "returns a success response", :dox do
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "GET #show" do
-    it "returns a success response" do
+    include Docs::V1::Cantons::Show
+
+    it "returns a success response", :dox do
       canton = Canton.create! valid_attributes
       get :show, params: { id: canton.to_param }, session: valid_session
       expect(response).to be_successful
@@ -32,6 +37,8 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
   end
 
   describe "POST #create" do
+    include Docs::V1::Cantons::Create
+
     let(:province) { create(:province) }
 
     let(:valid_canton) do
@@ -53,9 +60,9 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
     end
 
     context "when the request is valid" do
-      before { post :create, params: valid_canton, format: :json }
+      before { post :create, params: valid_canton }
 
-      it "creates a canton" do
+      it "creates a canton", :dox do
         json_response = JSON.parse(response.body)["id"]
         expect(Canton.find(json_response)).not_to be_nil
       end
@@ -70,7 +77,7 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
     end
 
     context "when the request is invalid" do
-      before { post :create, params: invalid_canton, format: :json }
+      before { post :create, params: invalid_canton }
 
       it "return status code unprocessable_entity" do
         expect(response).to have_http_status(:unprocessable_entity)
@@ -80,6 +87,8 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
   end
 
   describe "PUT #update" do
+    include Docs::V1::Cantons::Update
+
     context "with valid params" do
       let(:new_attributes) do
         {
@@ -88,7 +97,7 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
         }
       end
 
-      it "updates the requested canton" do
+      it "updates the requested canton", :dox do
         canton = Canton.create! valid_attributes
         put :update, params: { id: canton.to_param, canton: new_attributes }, session: valid_session
         canton.reload
@@ -116,7 +125,9 @@ RSpec.describe Api::V1::CantonsController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested canton" do
+    include Docs::V1::Cantons::Destroy
+
+    it "destroys the requested canton", :dox do
       canton = Canton.create! valid_attributes
       expect do
         delete :destroy, params: { id: canton.to_param }, session: valid_session

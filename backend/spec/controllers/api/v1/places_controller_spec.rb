@@ -1,6 +1,7 @@
 require "rails_helper"
 
-RSpec.describe Api::V1::PlacesController, type: :controller do
+RSpec.describe Api::V1::PlacesController, api: true, type: :controller do
+  include Docs::V1::Places::Api
 
   let(:valid_attributes) do
     {
@@ -22,28 +23,18 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    context "when topics present" do
-      let!(:places) { create_list(:place, 3) }
+    include Docs::V1::Places::Index
 
-      before { get :index, format: :json }
-
-      it "response is not empty" do
-        json_response = JSON.parse(response.body)
-        expect(json_response).not_to be_empty
-      end
-
-      it "returns status code ok" do
-        expect(response).to have_http_status(:ok)
-      end
-
-      it "validate @topics" do
-        expect(assigns(:places)).to match_array(places)
-      end
+    it "returns a success response", :dox do
+      get :index, params: {}, session: valid_session
+      expect(response).to be_successful
     end
   end
 
   describe "GET #show" do
-    it "returns a success response" do
+    include Docs::V1::Places::Show
+
+    it "returns a success response", :dox do
       place = Place.create! valid_attributes
       get :show, params: { id: place.to_param }, session: valid_session
       expect(response).to be_successful
@@ -51,6 +42,8 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
   end
 
   describe "POST #create" do
+    include Docs::V1::Places::Create
+
     let(:district) { create(:district) }
 
     let(:valid_place) do
@@ -76,8 +69,8 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
       }
     end
 
-    context "when the request is valid" do
-      before { post :create, params: valid_place, format: :json }
+    context "when the request is valid", :dox do
+      before { post :create, params: valid_place }
 
       it "creates a topic" do
         json_response = JSON.parse(response.body)["id"]
@@ -93,8 +86,8 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
       end
     end
 
-    context "when the request is invalid" do
-      before { post :create, params: invalid_place, format: :json }
+    context "when the request is invalid", :dox do
+      before { post :create, params: invalid_place }
 
       it "return status code unprocessable_entity" do
         expect(response).to have_http_status(:unprocessable_entity)
@@ -104,6 +97,8 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
   end
 
   describe "PUT #update" do
+    include Docs::V1::Places::Update
+
     context "with valid params" do
       let(:new_attributes) do
         {
@@ -115,7 +110,7 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
         }
       end
 
-      it "updates the requested place" do
+      it "updates the requested place", :dox do
         place = Place.create! valid_attributes
         put :update, params: { id: place.to_param, place: new_attributes }, session: valid_session
         place.reload
@@ -131,7 +126,7 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
       end
     end
 
-    context "with invalid params" do
+    context "with invalid params", :dox do
       it "renders a JSON response with errors for the place" do
         place = Place.create! valid_attributes
 
@@ -143,7 +138,9 @@ RSpec.describe Api::V1::PlacesController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested place" do
+    include Docs::V1::Places::Destroy
+
+    it "destroys the requested place", :dox do
       place = Place.create! valid_attributes
       expect do
         delete :destroy, params: { id: place.to_param }, session: valid_session
