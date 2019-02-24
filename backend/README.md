@@ -18,7 +18,7 @@ installing the gems under the block :production.
 
 ## How to create the database
 
-- Run `cp config/database.yml.template config/database.yml`
+- Run `$ cp config/database.yml.template config/database.yml`
 - Edit the database.yml to specify your specific database username/password if needed.
 
 - Run the following commands:
@@ -43,16 +43,22 @@ Run the command:
 
 1) Verify all the Rspec Test are fine by running:
 
-`bundle exec rspec`
+`$ bundle exec rspec`
 
 or just
 
-`rspec`
+`$ rspec`
 
 Running those commands would create or update a folder called coverage, which contains an html showing the code coverage, ensure that the coverage is 100%
 
 2) Run rubocop linter:
 
-`bundle exec rubocop`
+`$ bundle exec rubocop`
+
+Remember to create an .env file to store the environment variables.
+
+3) Generate API after tests docs:
+
+`$ ./generate_documentation.sh`
 
 Remember to create an .env file to store the environment variables.

@@ -1,6 +1,8 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::Users::RegistrationsController, type: :controller do
+  include Docs::V1::Authentication::Api
+
   before do
     request.env["devise.mapping"] = Devise.mappings[:user]
   end
@@ -22,7 +24,9 @@ RSpec.describe Api::V1::Users::RegistrationsController, type: :controller do
   end
 
   describe "POST #create" do
-    context "when user has personal information" do
+    include Docs::V1::Authentication::UserRegistration
+
+    context "when user has personal information", :dox do
       let!(:user_params) do
         {
           registration: {
@@ -55,7 +59,7 @@ RSpec.describe Api::V1::Users::RegistrationsController, type: :controller do
       end
     end
 
-    context "when user has no personal information" do
+    context "when user has no personal information", :dox do
       let!(:user_without_person_params) do
         {
           registration: {
@@ -84,11 +88,13 @@ RSpec.describe Api::V1::Users::RegistrationsController, type: :controller do
   end
 
   describe "PUT #update" do
+    include Docs::V1::Authentication::EditUserRegistration
+
     let(:user) { create :user }
     let(:person) { create :person, user: user }
     let(:user_id) { user.id }
 
-    context "when user updates his/her information" do
+    context "when user updates his/her information", :dox do
       let!(:update_user_with_person_params) do
         {
           registration: {

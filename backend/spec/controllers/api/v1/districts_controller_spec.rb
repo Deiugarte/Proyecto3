@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::DistrictsController, type: :controller do
+  include Docs::V1::Districts::Api
 
   let(:valid_attributes) do
     {
@@ -17,14 +18,18 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "returns a success response" do
+    include Docs::V1::Districts::Index
+
+    it "returns a success response", :dox do
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "GET #show" do
-    it "returns a success response" do
+    include Docs::V1::Districts::Show
+
+    it "returns a success response", :dox do
       district = District.create! valid_attributes
       get :show, params: { id: district.to_param }, session: valid_session
       expect(response).to be_successful
@@ -32,6 +37,8 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
   end
 
   describe "POST #create" do
+    include Docs::V1::Districts::Create
+
     let(:canton) { create(:canton) }
 
     let(:valid_district) do
@@ -52,8 +59,8 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
       }
     end
 
-    context "when the request is valid" do
-      before { post :create, params: valid_district, format: :json }
+    context "when the request is valid", :dox do
+      before { post :create, params: valid_district }
 
       it "creates a district" do
         json_response = JSON.parse(response.body)["id"]
@@ -70,7 +77,7 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
     end
 
     context "when the request is invalid" do
-      before { post :create, params: invalid_district, format: :json }
+      before { post :create, params: invalid_district }
 
       it "return status code unprocessable_entity" do
         expect(response).to have_http_status(:unprocessable_entity)
@@ -80,7 +87,8 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
   end
 
   describe "PUT #update" do
-    context "with valid params" do
+    include Docs::V1::Districts::Update
+    context "with valid params", :dox do
       let(:new_attributes) do
         {
           name: "District 2",
@@ -116,7 +124,9 @@ RSpec.describe Api::V1::DistrictsController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested district" do
+    include Docs::V1::Districts::Destroy
+
+    it "destroys the requested district", :dox do
       district = District.create! valid_attributes
       expect do
         delete :destroy, params: { id: district.to_param }, session: valid_session

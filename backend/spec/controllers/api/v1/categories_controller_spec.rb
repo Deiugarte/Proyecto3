@@ -1,6 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::CategoriesController, type: :controller do
+  include Docs::V1::Categories::Api
 
   let(:valid_attributes) do
     {
@@ -15,14 +16,18 @@ RSpec.describe Api::V1::CategoriesController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "returns a success response" do
+    include Docs::V1::Categories::Index
+
+    it "returns a success response", :dox do
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "GET #show" do
-    it "returns a success response" do
+    include Docs::V1::Categories::Show
+
+    it "returns a success response", :dox do
       category = Category.create! valid_attributes
       get :show, params: { id: category.to_param }, session: valid_session
       expect(response).to be_successful
@@ -30,7 +35,9 @@ RSpec.describe Api::V1::CategoriesController, type: :controller do
   end
 
   describe "POST #create" do
-    context "with valid params" do
+    include Docs::V1::Categories::Create
+
+    context "with valid params", :dox do
       it "creates a new Category" do
         expect do
           post :create, params: { category: valid_attributes }, session: valid_session
@@ -57,6 +64,8 @@ RSpec.describe Api::V1::CategoriesController, type: :controller do
   end
 
   describe "PUT #update" do
+    include Docs::V1::Categories::Update
+
     context "with valid params" do
       let(:new_attributes) do
         {
@@ -64,7 +73,7 @@ RSpec.describe Api::V1::CategoriesController, type: :controller do
         }
       end
 
-      it "updates the requested category" do
+      it "updates the requested category", :dox do
         category = Category.create! valid_attributes
         put :update, params: { id: category.to_param, category: new_attributes }, session: valid_session
         category.reload
@@ -92,7 +101,9 @@ RSpec.describe Api::V1::CategoriesController, type: :controller do
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested category" do
+    include Docs::V1::Categories::Destroy
+
+    it "destroys the requested category", :dox do
       category = Category.create! valid_attributes
       expect do
         delete :destroy, params: { id: category.to_param }, session: valid_session
