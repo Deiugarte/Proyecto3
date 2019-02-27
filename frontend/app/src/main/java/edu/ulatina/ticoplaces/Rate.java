@@ -93,7 +93,7 @@ public class Rate extends AppCompatActivity {
 
     }*/
 
-    @Override
+    /*@Override
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
         curRate = Float.valueOf(decimalFormat.format((curRate * count + rating)
@@ -109,5 +109,6 @@ public class Rate extends AppCompatActivity {
         //setRatingBar3.setRating(curRate3);
 
     }
+    */
 }
 
