@@ -17,4 +17,18 @@
     <string name="remember_me">Remember me</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
+    <string name="nombre">Nombre</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="date_of_birth_dd_mm_yyyy">Date of birth (dd/mm/yyyy)</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="cancel">Cancel</string>
+    <string-array name="names">
+        <item>Genero...</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
 </resources>
