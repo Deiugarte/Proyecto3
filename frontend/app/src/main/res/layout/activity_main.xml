@@ -48,4 +48,13 @@
         app:layout_constraintTop_toBottomOf="@+id/reviewbtn"
         tools:text="@string/sign_up" />
 
+    <Button
+        android:id="@+id/btnCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/title_activity_category"
+        app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
 </android.support.constraint.ConstraintLayout>

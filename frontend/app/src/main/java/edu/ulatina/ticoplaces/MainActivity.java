@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Button mapaBtn = findViewById(R.id.mapabtn);
         Button reviewBtn = findViewById(R.id.reviewbtn);
         Button signUpBtn = findViewById(R.id.btnSignUp);
+        Button categoryBtn = findViewById(R.id.btnCategory);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                Bundle bundle = new Bundle();
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        categoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Category.class);
                 Bundle bundle = new Bundle();
                 intent.putExtras(bundle);
                 startActivity(intent);
