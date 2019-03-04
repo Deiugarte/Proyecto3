@@ -30,4 +30,8 @@
         <item>Femenino</item>
         <item>Otro</item>
     </string-array>
+    <string name="title_activity_category">Category</string>
+    <string name="activity">Activity</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="lodging">Lodging</string>
 </resources>
