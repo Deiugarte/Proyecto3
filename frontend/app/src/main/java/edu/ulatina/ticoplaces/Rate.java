@@ -102,12 +102,24 @@ public class Rate extends AppCompatActivity {
                 / ++count2));
         curRate3 = Float.valueOf(decimalFormat.format((curRate3 * count3 + rating)
                 / ++count3));
+=======
+//    @Override
+//    public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+//        DecimalFormat decimalFormat = new DecimalFormat("#.#");
+//        curRate = Float.valueOf(decimalFormat.format((curRate * count + rating)
+//                / ++count));
+//        curRate2 = Float.valueOf(decimalFormat.format((curRate2 * count2 + rating)
+//                / ++count2));
+//        curRate3 = Float.valueOf(decimalFormat.format((curRate3 * count3 + rating)
+//                / ++count3));
+>>>>>>> Stashed changes
         //Toast.makeText(MainActivity.this,
         //      "New Rating: " + curRate+" "+ curRate2+" "+ curRate3+" ", Toast.LENGTH_SHORT).show();
         //setRatingBar1.setRating(curRate);
         //setRatingBar2.setRating(curRate2);
         //setRatingBar3.setRating(curRate3);
 
+<<<<<<< Updated upstream
     }
     */
 }
