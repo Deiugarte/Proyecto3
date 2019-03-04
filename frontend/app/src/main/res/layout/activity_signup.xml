@@ -8,7 +8,7 @@
     android:background="@drawable/androidbackground">
 
     <EditText
-        android:id="@+id/editText_Name"
+        android:id="@+id/txtSGName"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -21,7 +21,7 @@
         android:inputType="textPersonName"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/common_google_signin_btn_text_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editText10"
+        app:layout_constraintBottom_toTopOf="@+id/txtSGEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/txtSGEmail"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -46,11 +46,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Name"
+        app:layout_constraintTop_toBottomOf="@+id/txtSGName"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editText11"
+        android:id="@+id/txtSGPassword"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -61,15 +61,15 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColorHint="@color/common_google_signin_btn_text_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editText12"
+        app:layout_constraintBottom_toTopOf="@+id/txtSGConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        app:layout_constraintTop_toBottomOf="@+id/txtSGEmail"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editText12"
+        android:id="@+id/txtSGConfirmPassword"
         android:layout_width="360dp"
         android:layout_height="57dp"
         android:layout_marginStart="16dp"
@@ -82,15 +82,15 @@
         android:hint="@string/confirm_password"
         android:textColorHint="@color/common_google_signin_btn_text_dark"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintBottom_toTopOf="@+id/txtSGDoB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/txtSGPassword"
         android:autofillHints="" />
 
     <EditText
-        android:id="@+id/editText13"
+        android:id="@+id/txtSGDoB"
         android:layout_width="360dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -118,11 +118,11 @@
         android:layout_marginBottom="157dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText13"
+        app:layout_constraintTop_toBottomOf="@+id/txtSGDoB"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSGCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -133,7 +133,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="53dp"
