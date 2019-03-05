@@ -10,6 +10,7 @@
 #  user_id    :bigint(8)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gender     :integer
 #
 
 FactoryBot.define do

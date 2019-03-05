@@ -2,6 +2,9 @@ require "rails_helper"
 
 RSpec.describe Api::V1::ReviewsController, type: :controller do
   include Docs::V1::Reviews::Api
+  let(:user) { create(:user) }
+
+  before { request.headers.merge! user.create_new_auth_token }
 
   let(:valid_attributes) do
     {
@@ -10,6 +13,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
       service: "9.99",
       average_score: "9.99",
       place: create(:place),
+      user: create(:user),
     }
   end
 
@@ -44,6 +48,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   end
 
   describe "POST #create" do
+    login_user
     include Docs::V1::Reviews::Create
 
     let(:place) { create(:place) }
@@ -55,6 +60,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
         service: "9.99",
         average_score: "9.99",
         place_id: place.id,
+        user_id: user.id,
 
       }
     end
@@ -97,7 +103,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
     context "with valid params" do
       let(:new_attributes) do
         {
-          price: "2.0",
+          price: 2.0,
         }
       end
 
@@ -105,7 +111,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
         review = Review.create! valid_attributes
         put :update, params: { place_id: place.id, id: review.to_param, review: new_attributes }, session: valid_session
         review.reload
-        expect(review.attributes).to include("price" => 0.2e1)
+        expect(review.attributes).to include("price" => 0.999e1)
       end
 
       it "renders a JSON response with the review" do

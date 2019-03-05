@@ -54,3 +54,4 @@ end
     place: Place.find(rand(1..10)),
   )
 end
+Admin.create!(email: "admin@example.com", password: "password", password_confirmation: "password") if Rails.env.development?
