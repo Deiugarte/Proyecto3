@@ -27,5 +27,6 @@ RSpec.describe Place, type: :model do
     it { is_expected.to belong_to(:province) }
     it { is_expected.to belong_to(:canton) }
     it { is_expected.to have_many(:categories) }
+    it { is_expected.to have_many(:reviews) }
   end
 end

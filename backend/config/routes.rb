@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :cantons
       resources :categories
-      resources :districts
-      resources :places
+      resources :districts      
+      resources :places do 
+      resources :reviews
+      end  
     end
   end
 end
