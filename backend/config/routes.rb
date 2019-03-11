@@ -9,7 +9,10 @@ Rails.application.routes.draw do
       resources :cantons
       resources :categories
       resources :districts
-      resources :places
+      resources :places do
+        get "nearby", action: :nearby, on: :member
+      end
+      resources :logs, only: %i[index show create]
     end
   end
 end

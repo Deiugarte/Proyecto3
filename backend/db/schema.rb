@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_221718) do
+ActiveRecord::Schema.define(version: 2019_03_11_033825) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -73,6 +73,18 @@ ActiveRecord::Schema.define(version: 2019_03_03_221718) do
     t.index ["canton_id"], name: "index_districts_on_canton_id"
   end
 
+  create_table "logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "description"
+    t.decimal "latitude", precision: 10, scale: 6
+    t.decimal "longitude", precision: 10, scale: 6
+    t.bigint "user_id"
+    t.bigint "place_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_logs_on_place_id"
+    t.index ["user_id"], name: "index_logs_on_user_id"
+  end
+
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -95,8 +107,10 @@ ActiveRecord::Schema.define(version: 2019_03_03_221718) do
     t.bigint "province_id"
     t.bigint "canton_id"
     t.bigint "district_id"
+    t.text "address"
     t.index ["canton_id"], name: "index_places_on_canton_id"
     t.index ["district_id"], name: "index_places_on_district_id"
+    t.index ["latitude", "longitude"], name: "index_places_on_latitude_and_longitude"
     t.index ["province_id"], name: "index_places_on_province_id"
   end
 

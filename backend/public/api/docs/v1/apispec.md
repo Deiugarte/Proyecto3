@@ -33,15 +33,15 @@ Registration for new user
             {
               "status": "success",
               "data": {
-                "id": 253,
+                "id": 143,
                 "provider": "email",
                 "uid": "billgates@email.com",
                 "allow_password_change": false,
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-02-24T03:21:46.000Z",
-                "updated_at": "2019-02-24T03:21:46.000Z"
+                "created_at": "2019-03-11T04:44:34.000Z",
+                "updated_at": "2019-03-11T04:44:34.000Z"
               }
             }
 
@@ -67,15 +67,15 @@ Registration for new user
             {
               "status": "success",
               "data": {
-                "id": 254,
+                "id": 144,
                 "provider": "email",
                 "uid": "billgates@email.com",
                 "allow_password_change": false,
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-02-24T03:21:46.000Z",
-                "updated_at": "2019-02-24T03:21:46.000Z"
+                "created_at": "2019-03-11T04:44:34.000Z",
+                "updated_at": "2019-03-11T04:44:34.000Z"
               }
             }
 
@@ -101,15 +101,15 @@ Registration for new user
             {
               "status": "success",
               "data": {
-                "id": 255,
+                "id": 145,
                 "provider": "email",
                 "uid": "billgates@email.com",
                 "allow_password_change": false,
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-02-24T03:21:46.000Z",
-                "updated_at": "2019-02-24T03:21:47.000Z"
+                "created_at": "2019-03-11T04:44:34.000Z",
+                "updated_at": "2019-03-11T04:44:34.000Z"
               }
             }
 
@@ -135,15 +135,15 @@ Registration for new user
             {
               "status": "success",
               "data": {
-                "id": 256,
+                "id": 146,
                 "provider": "email",
                 "uid": "billgates@email.com",
                 "allow_password_change": false,
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-02-24T03:21:47.000Z",
-                "updated_at": "2019-02-24T03:21:47.000Z"
+                "created_at": "2019-03-11T04:44:34.000Z",
+                "updated_at": "2019-03-11T04:44:34.000Z"
               }
             }
 
@@ -159,7 +159,7 @@ Update info for existing user
 
     + Body
 
-            registration%5Bperson_attributes%5D%5Bfirst_name%5D=my_new_first_name&registration%5Buser_id%5D=257
+            registration%5Bperson_attributes%5D%5Bfirst_name%5D=my_new_first_name&registration%5Buser_id%5D=147
 
 + Response 200
 
@@ -172,15 +172,15 @@ Update info for existing user
             {
               "status": "success",
               "data": {
-                "id": 257,
-                "email": "dominiquezieme@sporer.net",
+                "id": 147,
+                "email": "herschelhartmann@connellybarrows.org",
                 "provider": "email",
-                "username": "luther_okuneva",
-                "uid": "dominiquezieme@sporer.net",
+                "username": "timothy",
+                "uid": "herschelhartmann@connellybarrows.org",
                 "allow_password_change": false,
                 "image": null,
-                "created_at": "2019-02-24T03:21:47.000Z",
-                "updated_at": "2019-02-24T03:21:47.000Z"
+                "created_at": "2019-03-11T04:44:34.000Z",
+                "updated_at": "2019-03-11T04:44:34.000Z"
               }
             }
 
@@ -213,10 +213,10 @@ Update info for existing user
 ### Get a canton [GET /api/v1/cantons/{id}]
 
 + Parameters
-    + id: `1839` (number, required)
+    + id: `318` (number, required)
 
 + Request returns a success response
-**GET**&nbsp;&nbsp;`/api/v1/cantons/1839`
+**GET**&nbsp;&nbsp;`/api/v1/cantons/318`
 
     + Headers
 
@@ -231,7 +231,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 1839,
+              "id": 318,
               "name": "Local 1",
               "description": "description 1",
               "province": "San José",
@@ -252,7 +252,7 @@ Update info for existing user
 
     + Body
 
-            canton%5Bdescription%5D=description+1&canton%5Bname%5D=Canton+1&canton%5Bprovince_id%5D=2344
+            canton%5Bdescription%5D=description+1&canton%5Bname%5D=Canton+1&canton%5Bprovince_id%5D=392
 
 + Response 201
 
@@ -263,7 +263,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 1840,
+              "id": 319,
               "name": "Canton 1",
               "description": "description 1",
               "province": "San José",
@@ -275,10 +275,10 @@ Update info for existing user
 ### Update a canton [PUT /api/v1/cantons/{id}]
 
 + Parameters
-    + id: `1843` (number, required)
+    + id: `322` (number, required)
 
 + Request updates the requested canton
-**PUT**&nbsp;&nbsp;`/api/v1/cantons/1843`
+**PUT**&nbsp;&nbsp;`/api/v1/cantons/322`
 
     + Headers
 
@@ -297,7 +297,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 1843,
+              "id": 322,
               "name": "Canton 2",
               "description": "description 2",
               "province": "San José",
@@ -309,10 +309,10 @@ Update info for existing user
 ### Delete a canton [DELETE /api/v1/cantons/{id}]
 
 + Parameters
-    + id: `1846` (number, required)
+    + id: `325` (number, required)
 
 + Request destroys the requested canton
-**DELETE**&nbsp;&nbsp;`/api/v1/cantons/1846`
+**DELETE**&nbsp;&nbsp;`/api/v1/cantons/325`
 
     + Headers
 
@@ -349,10 +349,10 @@ Update info for existing user
 ### Get a category [GET /api/v1/categories/{id}]
 
 + Parameters
-    + id: `260` (number, required)
+    + id: `64` (number, required)
 
 + Request returns a success response
-**GET**&nbsp;&nbsp;`/api/v1/categories/260`
+**GET**&nbsp;&nbsp;`/api/v1/categories/64`
 
     + Headers
 
@@ -367,7 +367,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 260,
+              "id": 64,
               "name": "Category 1",
               "subcategories": [
             
@@ -400,7 +400,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 261,
+              "id": 65,
               "name": "Category 1",
               "subcategories": [
             
@@ -430,7 +430,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 262,
+              "id": 66,
               "name": "Category 1",
               "subcategories": [
             
@@ -443,10 +443,10 @@ Update info for existing user
 ### Update a category [PUT /api/v1/categories/{id}]
 
 + Parameters
-    + id: `263` (number, required)
+    + id: `67` (number, required)
 
 + Request updates the requested category
-**PUT**&nbsp;&nbsp;`/api/v1/categories/263`
+**PUT**&nbsp;&nbsp;`/api/v1/categories/67`
 
     + Headers
 
@@ -465,7 +465,7 @@ Update info for existing user
     + Body
 
             {
-              "id": 263,
+              "id": 67,
               "name": "Category 2",
               "subcategories": [
             
@@ -478,10 +478,10 @@ Update info for existing user
 ### Delete a category [DELETE /api/v1/categories/{id}]
 
 + Parameters
-    + id: `266` (number, required)
+    + id: `70` (number, required)
 
 + Request destroys the requested category
-**DELETE**&nbsp;&nbsp;`/api/v1/categories/266`
+**DELETE**&nbsp;&nbsp;`/api/v1/categories/70`
 
     + Headers
 
@@ -518,10 +518,10 @@ Update info for existing user
 ### Get a district [GET /api/v1/districts/{id}]
 
 + Parameters
-    + id: `983` (number, required)
+    + id: `173` (number, required)
 
 + Request returns a success response
-**GET**&nbsp;&nbsp;`/api/v1/districts/983`
+**GET**&nbsp;&nbsp;`/api/v1/districts/173`
 
     + Headers
 
@@ -536,10 +536,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 983,
+              "id": 173,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Lake Corey",
+              "canton": "Lorenfurt",
               "province": "San José",
               "featured_places": [
             
@@ -558,7 +558,7 @@ Update info for existing user
 
     + Body
 
-            district%5Bcanton_id%5D=1848&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
+            district%5Bcanton_id%5D=327&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
 
 + Response 201
 
@@ -569,10 +569,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 984,
+              "id": 174,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Lake Miloville",
+              "canton": "Gerholdside",
               "province": "San José",
               "featured_places": [
             
@@ -588,7 +588,7 @@ Update info for existing user
 
     + Body
 
-            district%5Bcanton_id%5D=1849&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
+            district%5Bcanton_id%5D=328&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
 
 + Response 201
 
@@ -599,10 +599,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 985,
+              "id": 175,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Gottliebhaven",
+              "canton": "Conroyport",
               "province": "San José",
               "featured_places": [
             
@@ -618,7 +618,7 @@ Update info for existing user
 
     + Body
 
-            district%5Bcanton_id%5D=1850&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
+            district%5Bcanton_id%5D=329&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
 
 + Response 201
 
@@ -629,10 +629,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 986,
+              "id": 176,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Priceburgh",
+              "canton": "South Ambrosemouth",
               "province": "San José",
               "featured_places": [
             
@@ -642,10 +642,10 @@ Update info for existing user
 ### Update a district [PUT /api/v1/districts/{id}]
 
 + Parameters
-    + id: `987` (number, required)
+    + id: `177` (number, required)
 
 + Request updates the requested district
-**PUT**&nbsp;&nbsp;`/api/v1/districts/987`
+**PUT**&nbsp;&nbsp;`/api/v1/districts/177`
 
     + Headers
 
@@ -664,10 +664,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 987,
+              "id": 177,
               "name": "District 2",
               "description": "description 2",
-              "canton": "North Hildegardville",
+              "canton": "South Terrenceborough",
               "province": "San José",
               "featured_places": [
             
@@ -675,7 +675,7 @@ Update info for existing user
             }
 
 + Request renders a JSON response with the district
-**PUT**&nbsp;&nbsp;`/api/v1/districts/988`
+**PUT**&nbsp;&nbsp;`/api/v1/districts/178`
 
     + Headers
 
@@ -683,7 +683,7 @@ Update info for existing user
 
     + Body
 
-            district%5Bcanton%5D=1852&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
+            district%5Bcanton%5D=331&district%5Bdescription%5D=description+1&district%5Bname%5D=District+1
 
 + Response 200
 
@@ -694,10 +694,10 @@ Update info for existing user
     + Body
 
             {
-              "id": 988,
+              "id": 178,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Lake Gwynton",
+              "canton": "Ellistown",
               "province": "San José",
               "featured_places": [
             
@@ -707,16 +707,224 @@ Update info for existing user
 ### Delete a district [DELETE /api/v1/districts/{id}]
 
 + Parameters
-    + id: `990` (number, required)
+    + id: `180` (number, required)
 
 + Request destroys the requested district
-**DELETE**&nbsp;&nbsp;`/api/v1/districts/990`
+**DELETE**&nbsp;&nbsp;`/api/v1/districts/180`
 
     + Headers
 
             Content-Type: application/x-www-form-urlencoded
 
 + Response 204
+
+# Group Logs
+
+
+## Logs [/logs]
+### Resource for Log
+
+### Get logs [GET /api/v1/logs]
+
+
++ Request returns a success response
+**GET**&nbsp;&nbsp;`/api/v1/logs`
+
+    + Headers
+
+
+
++ Response 200
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+
+
+### Get a log [GET /api/v1/logs/{id}]
+
++ Parameters
+    + id: `23` (number, required)
+
++ Request returns a success response
+**GET**&nbsp;&nbsp;`/api/v1/logs/23`
+
+    + Headers
+
+
+
++ Response 200
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 23,
+              "description": null,
+              "latitude": "67.375991",
+              "longitude": "86.030529",
+              "user": {
+                "id": 135,
+                "provider": "email",
+                "uid": "domingadubuque@blanda.com",
+                "allow_password_change": false,
+                "username": "rolf",
+                "image": null,
+                "email": "domingadubuque@blanda.com",
+                "created_at": "2019-03-11T04:44:21.000Z",
+                "updated_at": "2019-03-11T04:44:21.000Z"
+              },
+              "place": {
+                "id": 101,
+                "name": "Hungry Pizza",
+                "telephone": "275.974.8589 x85198",
+                "email": "vance@bergstromboehm.name",
+                "latitude": "46.85644",
+                "longitude": "-66.021509",
+                "address": "Gibbons Island, Northumberland County, New Brunswick, E9E 1T3, Canada",
+                "province": "San José",
+                "canton": "Jaskolskiside",
+                "district": "East Karrenport"
+              }
+            }
+
+### Create a log [POST /api/v1/logs]
+
+
++ Request creates a new Log
+**POST**&nbsp;&nbsp;`/api/v1/logs`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            log%5Blatitude%5D=-28.65973274976742&log%5Blongitude%5D=32.68609046229557&log%5Bplace%5D=102&log%5Buser%5D=137
+
++ Response 201
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 24,
+              "description": null,
+              "latitude": "-28.659733",
+              "longitude": "32.68609",
+              "user": {
+                "id": 136,
+                "provider": "email",
+                "uid": "corazonkirlin@conn.com",
+                "allow_password_change": false,
+                "username": "kathaleen.aufderhar",
+                "image": null,
+                "email": "corazonkirlin@conn.com",
+                "created_at": "2019-03-11T04:44:22.000Z",
+                "updated_at": "2019-03-11T04:44:22.000Z"
+              },
+              "place": null
+            }
+
++ Request renders a JSON response with the new log
+**POST**&nbsp;&nbsp;`/api/v1/logs`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            log%5Blatitude%5D=7.3222289850196915&log%5Blongitude%5D=165.33762559482608&log%5Bplace%5D=103&log%5Buser%5D=139
+
++ Response 201
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 25,
+              "description": null,
+              "latitude": "7.322229",
+              "longitude": "165.337626",
+              "user": {
+                "id": 138,
+                "provider": "email",
+                "uid": "autumnschmeler@beier.net",
+                "allow_password_change": false,
+                "username": "adam",
+                "image": null,
+                "email": "autumnschmeler@beier.net",
+                "created_at": "2019-03-11T04:44:23.000Z",
+                "updated_at": "2019-03-11T04:44:23.000Z"
+              },
+              "place": null
+            }
+
++ Request renders a JSON response with errors for the new log
+**POST**&nbsp;&nbsp;`/api/v1/logs`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            log%5Blatitude%5D=
+
++ Response 422
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "latitude": [
+                "can't be blank"
+              ],
+              "longitude": [
+                "can't be blank"
+              ]
+            }
+
++ Request returns a 401
+**POST**&nbsp;&nbsp;`/api/v1/logs`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            log%5Blatitude%5D=-58.33654453272289&log%5Blongitude%5D=96.77009762022897&log%5Bplace%5D=104&log%5Buser%5D=141
+
++ Response 401
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "errors": [
+                "You need to sign in or sign up before continuing."
+              ]
+            }
 
 # Group Places
 
@@ -747,10 +955,10 @@ Update info for existing user
 ### Get a place [GET /api/v1/places/{id}]
 
 + Parameters
-    + id: `653` (number, required)
+    + id: `105` (number, required)
 
 + Request returns a success response
-**GET**&nbsp;&nbsp;`/api/v1/places/653`
+**GET**&nbsp;&nbsp;`/api/v1/places/105`
 
     + Headers
 
@@ -765,15 +973,16 @@ Update info for existing user
     + Body
 
             {
-              "id": 653,
+              "id": 105,
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "52.675704",
-              "longitude": "95.152899",
+              "latitude": "40.413815",
+              "longitude": "156.150266",
+              "address": null,
               "province": "San José",
-              "canton": "Feestport",
-              "district": "Yadiraborough",
+              "canton": "Smithshire",
+              "district": "Rheachester",
               "categories": [
             
               ]
@@ -791,7 +1000,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=1857&place%5Bdistrict_id%5D=992&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=2.8590014034429885&place%5Blongitude%5D=97.84470036152544&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=2362&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=344&place%5Bdistrict_id%5D=186&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=63.01173381855722&place%5Blongitude%5D=-79.68452022400312&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=422&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -802,15 +1011,16 @@ Update info for existing user
     + Body
 
             {
-              "id": 654,
+              "id": 106,
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "2.859001",
-              "longitude": "97.8447",
+              "latitude": "63.011734",
+              "longitude": "-79.68452",
+              "address": "Nunavut, Canada",
               "province": "San José",
-              "canton": "Port Tarynstad",
-              "district": "Bradyton",
+              "canton": "Shayfurt",
+              "district": "Aurelioville",
               "categories": [
             
               ]
@@ -825,7 +1035,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=1858&place%5Bdistrict_id%5D=993&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-16.916332599673595&place%5Blongitude%5D=-103.54644196364629&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=2363&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=345&place%5Bdistrict_id%5D=187&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-23.2737500771902&place%5Blongitude%5D=-81.95384153977426&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=423&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -836,15 +1046,16 @@ Update info for existing user
     + Body
 
             {
-              "id": 655,
+              "id": 107,
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-16.916333",
-              "longitude": "-103.546442",
+              "latitude": "-23.27375",
+              "longitude": "-81.953842",
+              "address": null,
               "province": "San José",
-              "canton": "Paulenestad",
-              "district": "Shaundafort",
+              "canton": "Brakusview",
+              "district": "North Juliannaport",
               "categories": [
             
               ]
@@ -859,7 +1070,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=1859&place%5Bdistrict_id%5D=994&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-43.08074143077089&place%5Blongitude%5D=-124.1126546812324&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=2364&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=346&place%5Bdistrict_id%5D=188&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-73.72276443781934&place%5Blongitude%5D=-140.28440070997877&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=424&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -870,15 +1081,16 @@ Update info for existing user
     + Body
 
             {
-              "id": 656,
+              "id": 108,
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-43.080741",
-              "longitude": "-124.112655",
+              "latitude": "-73.722764",
+              "longitude": "-140.284401",
+              "address": null,
               "province": "San José",
-              "canton": "Shanahanborough",
-              "district": "Krajcikton",
+              "canton": "Lake Malcom",
+              "district": "Hodkiewiczfort",
               "categories": [
             
               ]
@@ -933,10 +1145,10 @@ Update info for existing user
 ### Update a place [PUT /api/v1/places/{id}]
 
 + Parameters
-    + id: `657` (number, required)
+    + id: `109` (number, required)
 
 + Request updates the requested place
-**PUT**&nbsp;&nbsp;`/api/v1/places/657`
+**PUT**&nbsp;&nbsp;`/api/v1/places/109`
 
     + Headers
 
@@ -944,7 +1156,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=0.4053466960176735&place%5Blongitude%5D=175.8254544171237&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
+            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=26.54393116677666&place%5Blongitude%5D=92.80531268812763&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
 
 + Response 200
 
@@ -955,22 +1167,23 @@ Update info for existing user
     + Body
 
             {
-              "id": 657,
+              "id": 109,
               "name": "Local 2",
               "telephone": "436-604-5688",
               "email": "local2@example.com",
-              "latitude": "0.405347",
-              "longitude": "175.825454",
+              "latitude": "26.543931",
+              "longitude": "92.805313",
+              "address": "Nowgong, Nagaon, Assam, India",
               "province": "San José",
-              "canton": "South Trevor",
-              "district": "East Edgarhaven",
+              "canton": "Dickensfort",
+              "district": "North Brain",
               "categories": [
             
               ]
             }
 
 + Request renders a JSON response with errors for the place
-**PUT**&nbsp;&nbsp;`/api/v1/places/659`
+**PUT**&nbsp;&nbsp;`/api/v1/places/111`
 
     + Headers
 
@@ -1003,10 +1216,10 @@ Update info for existing user
 ### Delete a place [DELETE /api/v1/places/{id}]
 
 + Parameters
-    + id: `660` (number, required)
+    + id: `112` (number, required)
 
 + Request destroys the requested place
-**DELETE**&nbsp;&nbsp;`/api/v1/places/660`
+**DELETE**&nbsp;&nbsp;`/api/v1/places/112`
 
     + Headers
 

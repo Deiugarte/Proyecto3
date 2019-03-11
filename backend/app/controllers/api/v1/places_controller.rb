@@ -1,6 +1,6 @@
 class Api::V1::PlacesController < Api::V1::ApiController
 
-  before_action :set_place, only: %i[show update destroy]
+  before_action :set_place, only: %i[show update destroy nearby]
 
   def index
     @places = Place.all
@@ -32,6 +32,10 @@ class Api::V1::PlacesController < Api::V1::ApiController
 
   def destroy
     @place.destroy
+  end
+
+  def nearby
+    render json: @place.nearbys(30)
   end
 
   private
