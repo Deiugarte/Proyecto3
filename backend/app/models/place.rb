@@ -13,15 +13,19 @@
 #  province_id :bigint(8)
 #  canton_id   :bigint(8)
 #  district_id :bigint(8)
+#  address     :text(65535)
 #
 
 class Place < ApplicationRecord
 
   validates :name, :telephone, :email, :latitude, :longitude, presence: true
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode
   belongs_to :province
   belongs_to :canton
   belongs_to :district
   has_many :category_places, dependent: :destroy
   has_many :categories, -> { distinct }, through: :category_places
+  has_many :logs, dependent: :destroy
 
 end

@@ -13,11 +13,12 @@
 #  province_id :bigint(8)
 #  canton_id   :bigint(8)
 #  district_id :bigint(8)
+#  address     :text(65535)
 #
 
 class PlaceSerializer < ActiveModel::Serializer
 
-  attributes :id, :name, :telephone, :email, :latitude, :longitude, :province, :canton, :district
+  attributes :id, :name, :telephone, :email, :latitude, :longitude, :address, :province, :canton, :district
   has_many :categories
 
   def province
