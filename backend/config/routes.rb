@@ -11,7 +11,9 @@ Rails.application.routes.draw do
       resources :districts
       resources :places do
         resources :reviews
+        get "nearby", action: :nearby, on: :member
       end
+      resources :logs, only: %i[index show create]
     end
   end
 end

@@ -18,7 +18,7 @@
 
 class PlaceSerializer < ActiveModel::Serializer
 
-  attributes :id, :name, :telephone, :email, :latitude, :longitude, :province, :canton, :district
+  attributes :id, :name, :telephone, :email, :latitude, :longitude, :address, :province, :canton, :district
   has_many :categories
 
   def province

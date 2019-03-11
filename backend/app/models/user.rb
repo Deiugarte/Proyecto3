@@ -38,6 +38,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true, presence: true
   has_one :person, dependent: :destroy
   has_many :reviews, dependent: :destroy
+  has_many :logs, dependent: :destroy
 
   accepts_nested_attributes_for :person
 
