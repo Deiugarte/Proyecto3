@@ -15,7 +15,6 @@
 class Review < ApplicationRecord
 
   validates :quality, :service, :price, :average_score, presence: true
-
   belongs_to :place
-
+  belongs_to :user
 end

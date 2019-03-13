@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_012947) do
+ActiveRecord::Schema.define(version: 2019_03_09_175934) do
 
   create_table "cantons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -88,7 +88,9 @@ ActiveRecord::Schema.define(version: 2019_03_04_012947) do
     t.bigint "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["place_id"], name: "index_reviews_on_place_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
