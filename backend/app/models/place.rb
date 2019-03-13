@@ -24,4 +24,5 @@ class Place < ApplicationRecord
   has_many :category_places, dependent: :destroy
   has_many :categories, -> { distinct }, through: :category_places
   has_many :reviews, dependent: :destroy
+
 end

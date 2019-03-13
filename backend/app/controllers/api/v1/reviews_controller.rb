@@ -17,8 +17,8 @@ class Api::V1::ReviewsController < Api::V1::ApiController
 
   # POST /api/v1/reviews
   def create
-    #binding.pry
-    #@review = @place.reviews.new(review_params)
+    # binding.pry
+    # @review = @place.reviews.new(review_params)
     @review = current_user.reviews.new(review_params)
     @review.place = @place
 
@@ -58,8 +58,8 @@ class Api::V1::ReviewsController < Api::V1::ApiController
 
   # Only allow a trusted parameter "white list" through.
   def review_params
-    params.require(:review).permit(:quality, :service, 
-    :price, :average_score)
+    params.require(:review).permit(:quality, :service,
+                                   :price, :average_score)
   end
 
 end
