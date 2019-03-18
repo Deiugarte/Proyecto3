@@ -14,6 +14,7 @@ class Canton < ApplicationRecord
 
   validates :name, presence: true
   belongs_to :province
+  has_many :districts, dependent: :destroy
   has_many :places, dependent: :destroy
 
 end

@@ -2,13 +2,13 @@ require "rails_helper"
 
 RSpec.describe Api::V1::LogsController, type: :controller do
   include Docs::V1::Logs::Api
-
+  let(:district) { create(:district) }
   let(:valid_attributes) do
     {
       latitude: Faker::Address.latitude,
       longitude: Faker::Address.longitude,
       user: create(:user),
-      place: create(:place),
+      place: create(:place, district: district, province: district.canton.province, canton: district.canton),
     }
   end
 
@@ -31,7 +31,9 @@ RSpec.describe Api::V1::LogsController, type: :controller do
     include Docs::V1::Logs::Show
 
     it "returns a success response", :dox do
-      log = Log.create! valid_attributes
+      district = create(:district)
+      place = create(:place, district: district, canton: district.canton, province: district.canton.province)
+      log = create(:log, place: place)
       get :show, params: { id: log.to_param }, session: valid_session
       expect(response).to be_successful
     end

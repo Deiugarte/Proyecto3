@@ -41,9 +41,7 @@ class Api::V1::CategoriesController < Api::V1::ApiController
   end
 
   def category_params
-    params.require(:category).permit(
-      :name,
-    )
+    params.require(:category).permit(:name)
   end
 
 end

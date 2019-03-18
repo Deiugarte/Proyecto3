@@ -5,6 +5,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   let(:user) { create(:user) }
 
   before { request.headers.merge! user.create_new_auth_token }
+  let(:district) { create(:district) }
 
   let(:valid_attributes) do
     {
@@ -12,7 +13,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
       quality: "9.99",
       service: "9.99",
       average_score: "9.99",
-      place: create(:place),
+      place: create(:place, district: district, canton: district.canton, province: district.canton.province),
       user: create(:user),
     }
   end
@@ -28,8 +29,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
 
   describe "GET #index" do
     include Docs::V1::Reviews::Index
-
-    let(:place) { create(:place) }
+    let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
     it "returns a success response" do
       get :index, params: { place_id: place.id }, session: valid_session
       expect(response).to be_successful
@@ -39,7 +39,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   describe "GET #show" do
     include Docs::V1::Reviews::Show
 
-    let(:place) { create(:place) }
+    let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
     it "returns a success response" do
       review = Review.create! valid_attributes
       get :show, params: { place_id: place.id, id: review.to_param }, session: valid_session
@@ -51,7 +51,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
     login_user
     include Docs::V1::Reviews::Create
 
-    let(:place) { create(:place) }
+    let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
 
     let(:valid_review) do
       {
@@ -99,7 +99,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   describe "PUT #update" do
     include Docs::V1::Reviews::Update
 
-    let(:place) { create(:place) }
+    let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
     context "with valid params" do
       let(:new_attributes) do
         {
@@ -144,7 +144,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   describe "DELETE #destroy" do
     include Docs::V1::Reviews::Destroy
 
-    let(:place) { create(:place) }
+    let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
     it "destroys the requested review" do
       review = Review.create! valid_attributes
       expect do

@@ -22,6 +22,10 @@ module Docs
         action "Get a place"
       end
 
+      document :nearby do
+        action "Get nearby places 16km radius"
+      end
+
       document :update do
         action "Update a place"
       end
