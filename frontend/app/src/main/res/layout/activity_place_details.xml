@@ -54,12 +54,7 @@
         android:id="@+id/fTab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Overview">
-        <include
-            layout="@layout/activity_rate"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </android.support.design.widget.TabItem>
+        android:text="Overview"/>
 
     <android.support.design.widget.TabItem
         android:id="@+id/sTab"

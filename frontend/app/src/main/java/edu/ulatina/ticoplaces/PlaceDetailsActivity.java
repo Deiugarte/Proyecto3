@@ -19,27 +19,27 @@ import android.view.MenuItem;
 
 public class PlaceDetailsActivity extends AppCompatActivity {
 
-    TabLayout tabLayout = findViewById(R.id.tablayout);
-    TabItem tabChats = findViewById(R.id.fTab);
-    TabItem tabStatus = findViewById(R.id.sTab);
-    TabItem tabCalls = findViewById(R.id.tTab);
-    ViewPager viewPager = findViewById(R.id.viewPager);
+//    TabLayout tabLayout = findViewById(R.id.tablayout);
+//    TabItem tabChats = findViewById(R.id.fTab);
+//    TabItem tabStatus = findViewById(R.id.sTab);
+//    TabItem tabCalls = findViewById(R.id.tTab);
+//    ViewPager viewPager = findViewById(R.id.viewPager);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_details);
 
-        tabLayout = findViewById(R.id.tablayout);
-        viewPager = findViewById(R.id.viewPager);
-        PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
-        //Adding Fragments
-//        adapter.addFragment(new OverviewFragment(),"Overview");
-//        adapter.addFragment(new PhotosFragment(),"Photos");
-//        adapter.addFragment(new RatingFragment(),"Rating");
-        //adapter set up
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
+//        tabLayout = findViewById(R.id.tablayout);
+//        viewPager = findViewById(R.id.viewPager);
+//        PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
+//        //Adding Fragments
+////        adapter.addFragment(new OverviewFragment(),"Overview");
+////        adapter.addFragment(new PhotosFragment(),"Photos");
+////        adapter.addFragment(new RatingFragment(),"Rating");
+//        //adapter set up
+//        viewPager.setAdapter(adapter);
+//        tabLayout.setupWithViewPager(viewPager);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     }
