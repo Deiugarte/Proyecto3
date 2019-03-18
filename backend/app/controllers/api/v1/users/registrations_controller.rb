@@ -23,13 +23,16 @@ class Api::V1::Users::RegistrationsController < DeviseTokenAuth::RegistrationsCo
   end
 
   def user_params
-    params.require(:registration).permit(:email, :username, :password, :password_confirmation,
-                                         person_attributes: %i[
-                                           first_name
-                                           last_name
-                                           birth_date
-                                           phone
-                                         ])
+    params.require(:registration).permit(:email, :username, :password, :password_confirmation, person_attributes: person)
+  end
+
+  def person
+    %i[
+      first_name
+      last_name
+      birth_date
+      phone
+    ]
   end
 
   def set_resource
