@@ -34,4 +34,5 @@
     <string name="activity">Activity</string>
     <string name="restaurant">Restaurant</string>
     <string name="lodging">Lodging</string>
+    <string name="Place_Detail">Place Detail</string>
 </resources>
