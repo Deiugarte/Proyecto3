@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/androidbackground">
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/txtSGName"
@@ -16,11 +15,12 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/common_google_signin_btn_text_dark"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        android:textColorHint="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toTopOf="@+id/txtSGEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.31"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintVertical_chainStyle="spread_inside"
-        android:autofillHints="" />
+        tools:textColorHint="@color/cast_expanded_controller_background_color" />
 
     <EditText
         android:id="@+id/txtSGEmail"
@@ -41,8 +41,9 @@
         android:layout_marginRight="35dp"
         android:ems="10"
         android:hint="@string/email"
+        android:textColor="@color/cast_expanded_controller_background_color"
         android:inputType="textWebEmailAddress"
-        android:textColorHint="@color/common_google_signin_btn_text_dark"
+        tools:textColorHint="@color/cast_expanded_controller_background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,8 +60,9 @@
         android:layout_marginRight="35dp"
         android:ems="10"
         android:hint="@string/password"
+        android:textColor="@color/cast_expanded_controller_background_color"
         android:inputType="textPassword"
-        android:textColorHint="@color/common_google_signin_btn_text_dark"
+        tools:textColorHint="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toTopOf="@+id/txtSGConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +82,8 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/confirm_password"
-        android:textColorHint="@color/common_google_signin_btn_text_dark"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        tools:textColorHint="@color/cast_expanded_controller_background_color"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/txtSGDoB"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +104,8 @@
         android:ems="10"
         android:hint="@string/date_of_birth_dd_mm_yyyy"
         android:inputType="text"
-        android:textColorHint="@color/common_google_signin_btn_text_dark"
+        android:textColor="@color/cast_expanded_controller_background_color"
+        tools:textColorHint="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -57,4 +57,14 @@
         app:layout_constraintStart_toStartOf="@+id/btnSignUp"
         app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
+    <Button
+        android:id="@+id/btnPlcDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/Place_Detail"
+        app:layout_constraintStart_toStartOf="@+id/btnCategory"
+        app:layout_constraintTop_toBottomOf="@+id/btnCategory"
+        tools:text="Place Detail" />
+
 </android.support.constraint.ConstraintLayout>

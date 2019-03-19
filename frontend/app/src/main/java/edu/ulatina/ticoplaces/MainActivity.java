@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button reviewBtn = findViewById(R.id.reviewbtn);
         Button signUpBtn = findViewById(R.id.btnSignUp);
         Button categoryBtn = findViewById(R.id.btnCategory);
+        Button placeDetailBtn = findViewById(R.id.btnPlcDetail);
 
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//        placeDetailBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, PlaceDetailsActivity.class);
+//                Bundle bundle = new Bundle();
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }

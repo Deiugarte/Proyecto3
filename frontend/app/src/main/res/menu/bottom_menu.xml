@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/action_hotel"
+        android:enabled="true"
+        android:title="Hotels"
+        android:icon="@drawable/ic_hotel_black_24dp"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:id="@+id/action_restaurant"
+        android:enabled="true"
+        android:title="Restaurants"
+        android:icon="@drawable/ic_restaurant_black_24dp"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:id="@+id/action_other"
+        android:enabled="true"
+        android:title="Other"
+        android:icon="@drawable/ic_rowing_black_24dp"
+        app:showAsAction="collapseActionView"
+        />
+</menu>
