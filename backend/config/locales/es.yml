@@ -26,7 +26,7 @@ es:
         one: "Lugar"
         other: "Lugares"
     attributes:
-      place: 
+      place:
         name: "Nombre"
         telephone: "Teléfono"
         email: "Correo"
@@ -38,14 +38,14 @@ es:
         categories: "Categorias"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
-      canton: 
+      canton:
         name: "Nombre"
         description: "Descripción"
         province: "Provincia"
         places: "Lugares"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
-      person: 
+      person:
         first_name: "Primer Nombre"
         last_name: "Apellido"
         phone: "teléfono"
@@ -58,7 +58,7 @@ es:
         last_sign_in_at: "Ultima vez en linea"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
-      district: 
+      district:
         name: Nombre
         description: "Descripción"
         canton: "Cantón"

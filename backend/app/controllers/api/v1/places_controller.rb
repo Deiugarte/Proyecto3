@@ -35,7 +35,7 @@ class Api::V1::PlacesController < Api::V1::ApiController
   end
 
   def nearby
-    render json: @place.nearbys(30)
+    render json: @place.nearbys(10)
   end
 
   private

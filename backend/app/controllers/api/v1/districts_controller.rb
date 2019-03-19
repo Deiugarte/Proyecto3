@@ -41,11 +41,7 @@ class Api::V1::DistrictsController < Api::V1::ApiController
   end
 
   def district_params
-    params.require(:district).permit(
-      :name,
-      :description,
-      :canton_id,
-    )
+    params.require(:district).permit(:name, :description, :canton_id)
   end
 
 end

@@ -41,11 +41,7 @@ class Api::V1::CantonsController < Api::V1::ApiController
   end
 
   def canton_params
-    params.require(:canton).permit(
-      :name,
-      :description,
-      :province_id,
-    )
+    params.require(:canton).permit(:name, :description, :province_id)
   end
 
 end
