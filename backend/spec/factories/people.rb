@@ -19,6 +19,7 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     birth_date { Faker::Date.birthday(18, 65) }
     phone { Faker::PhoneNumber.phone_number }
+    gender { rand(0..2) }
 
     trait :with_user do
       user

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
       resources :logs, only: %i[index show create]
     end
   end
+  match "*a", to: "api/v1/errors#routing", via: :all
 end

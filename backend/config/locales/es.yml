@@ -48,9 +48,14 @@ es:
       person:
         first_name: "Primer Nombre"
         last_name: "Apellido"
-        phone: "teléfono"
+        phone: "Teléfono"
+        birth_date: "Fecha de Nacimiento"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
+        genders:
+          male: "Masculino"
+          female: "Femenino"
+          other: "Otro"
       user:
         email: "Correo Electrónico"
         username: "Nombre Usuario"

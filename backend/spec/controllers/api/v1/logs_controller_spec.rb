@@ -56,7 +56,6 @@ RSpec.describe Api::V1::LogsController, type: :controller do
         post :create, params: { log: valid_attributes }, session: valid_session
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq("application/json")
-        expect(response.location).to eq(api_v1_log_url(Log.last))
       end
     end
 
