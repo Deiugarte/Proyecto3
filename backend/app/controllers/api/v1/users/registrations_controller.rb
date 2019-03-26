@@ -32,6 +32,7 @@ class Api::V1::Users::RegistrationsController < DeviseTokenAuth::RegistrationsCo
       last_name
       birth_date
       phone
+      gender
     ]
   end
 

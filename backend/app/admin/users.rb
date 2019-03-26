@@ -16,6 +16,7 @@ ActiveAdmin.register User do
                   last_name
                   birth_date
                   phone
+                  gender
                   _destroy
                 ]
 
@@ -50,6 +51,9 @@ ActiveAdmin.register User do
       row "Teléfono" do |user|
         user.person.phone if user.person.present?
       end
+      row "Género" do |user|
+        user.person.gender if user.person.present?
+      end
       row :email
       row :sign_in_count
       row :last_sign_in_at
@@ -68,6 +72,8 @@ ActiveAdmin.register User do
         p.input :last_name
         p.input :birth_date
         p.input :phone
+        p.input :gender, as: :radio, collection:
+          Person.genders.keys.collect { |gender| [Person.human_enum_name(:gender, gender), gender] }
       end
       f.actions
     end
