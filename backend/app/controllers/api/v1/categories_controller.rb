@@ -5,33 +5,33 @@ class Api::V1::CategoriesController < Api::V1::ApiController
   def index
     @categories = Category.all
 
-    render json: @categories
+    json_response(@categories)
   end
 
   def show
-    render json: @category
+    json_response(@category)
   end
 
   def create
     @category = Category.new(category_params)
 
     if @category.save
-      render json: @category, status: :created, location: api_v1_category_url(@category)
+      json_response(@category, 201)
     else
-      render json: @category.errors, status: :unprocessable_entity
+      json_response(@category.errors, 422)
     end
   end
 
   def update
     if @category.update(category_params)
-      render json: @category
+      json_response(@category)
     else
-      render json: @category.errors, status: :unprocessable_entity
+      json_response(@category.errors, 422)
     end
   end
 
   def destroy
-    @category.destroy
+    json_response(@category.destroy, 204)
   end
 
   private

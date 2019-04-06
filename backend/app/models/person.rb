@@ -10,10 +10,12 @@
 #  user_id    :bigint(8)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  gender     :integer
 #
 
 class Person < ApplicationRecord
 
+  enum gender: { male: 0, female: 1, other: 2 }
   belongs_to :user
 
 end

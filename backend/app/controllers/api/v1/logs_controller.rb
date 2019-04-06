@@ -5,13 +5,13 @@ class Api::V1::LogsController < Api::V1::ApiController
   def index
     @logs = Log.all
 
-    render json: @logs
+    json_response(@logs)
   end
 
   def show
     @log = Log.find(params[:id])
 
-    render json: @log
+    json_response(@log)
   end
 
   def create
@@ -20,9 +20,9 @@ class Api::V1::LogsController < Api::V1::ApiController
     @log.place = place unless place.nil?
 
     if @log.save
-      render json: @log, status: :created, location: api_v1_log_url(@log)
+      json_response(@log, 201)
     else
-      render json: @log.errors, status: :unprocessable_entity
+      json_response(@log.errors, 422)
     end
   end
 

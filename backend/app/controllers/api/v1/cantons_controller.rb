@@ -5,33 +5,33 @@ class Api::V1::CantonsController < Api::V1::ApiController
   def index
     @cantons = Canton.all
 
-    render json: @cantons
+    json_response(@cantons)
   end
 
   def show
-    render json: @canton
+    json_response(@canton)
   end
 
   def create
     @canton = Canton.new(canton_params)
 
     if @canton.save
-      render json: @canton, status: :created, location: api_v1_place_url(@canton)
+      json_response(@canton, 201)
     else
-      render json: @canton.errors, status: :unprocessable_entity
+      json_response(@canton.errors, 422)
     end
   end
 
   def update
     if @canton.update(canton_params)
-      render json: @canton
+      json_response(@canton)
     else
-      render json: @canton.errors, status: :unprocessable_entity
+      json_response(@canton.errors, 422)
     end
   end
 
   def destroy
-    @canton.destroy
+    json_response(@canton.destroy, 204)
   end
 
   private

@@ -5,28 +5,28 @@ class Api::V1::PlacesController < Api::V1::ApiController
   def index
     @places = Place.all
 
-    render json: @places
+    json_response(@places)
   end
 
   def show
-    render json: @place
+    json_response(@place)
   end
 
   def create
     @place = Place.new(place_params)
 
     if @place.save
-      render json: @place, status: :created, location: api_v1_place_url(@place)
+      json_response(@place, 201)
     else
-      render json: @place.errors, status: :unprocessable_entity
+      json_response(@place.errors, 422)
     end
   end
 
   def update
     if @place.update(place_params)
-      render json: @place
+      json_response(@place)
     else
-      render json: @place.errors, status: :unprocessable_entity
+      json_response(@place.errors, 422)
     end
   end
 
@@ -35,7 +35,7 @@ class Api::V1::PlacesController < Api::V1::ApiController
   end
 
   def nearby
-    render json: @place.nearbys(10)
+    json_response(@place.nearbys(10))
   end
 
   private
