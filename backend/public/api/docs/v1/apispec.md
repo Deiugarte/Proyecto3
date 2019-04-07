@@ -40,8 +40,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:30:46.000Z",
-                "updated_at": "2019-04-07T16:30:46.000Z"
+                "created_at": "2019-04-07T16:44:30.000Z",
+                "updated_at": "2019-04-07T16:44:30.000Z"
               }
             }
 
@@ -74,8 +74,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:30:46.000Z",
-                "updated_at": "2019-04-07T16:30:46.000Z"
+                "created_at": "2019-04-07T16:44:30.000Z",
+                "updated_at": "2019-04-07T16:44:30.000Z"
               }
             }
 
@@ -108,8 +108,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:30:46.000Z",
-                "updated_at": "2019-04-07T16:30:46.000Z"
+                "created_at": "2019-04-07T16:44:30.000Z",
+                "updated_at": "2019-04-07T16:44:30.000Z"
               }
             }
 
@@ -142,8 +142,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:30:46.000Z",
-                "updated_at": "2019-04-07T16:30:46.000Z"
+                "created_at": "2019-04-07T16:44:30.000Z",
+                "updated_at": "2019-04-07T16:44:30.000Z"
               }
             }
 
@@ -173,14 +173,14 @@ Update info for existing user
               "status": "success",
               "data": {
                 "id": 30,
-                "email": "major@cruickshank.biz",
+                "email": "billiekemmer@stroman.io",
                 "provider": "email",
-                "username": "jimmy.ohara",
-                "uid": "major@cruickshank.biz",
+                "username": "billie",
+                "uid": "billiekemmer@stroman.io",
                 "allow_password_change": false,
                 "image": null,
-                "created_at": "2019-04-07T16:30:46.000Z",
-                "updated_at": "2019-04-07T16:30:46.000Z"
+                "created_at": "2019-04-07T16:44:30.000Z",
+                "updated_at": "2019-04-07T16:44:30.000Z"
               }
             }
 
@@ -547,7 +547,7 @@ Update info for existing user
               "id": 1,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Alitafort",
+              "canton": "South Tod",
               "province": "San José",
               "featured_places": [
             
@@ -580,7 +580,7 @@ Update info for existing user
               "id": 2,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Port Adan",
+              "canton": "Virgenshire",
               "province": "San José",
               "featured_places": [
             
@@ -610,7 +610,7 @@ Update info for existing user
               "id": 3,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Nolaland",
+              "canton": "Port Nedport",
               "province": "San José",
               "featured_places": [
             
@@ -640,7 +640,7 @@ Update info for existing user
               "id": 4,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Ivanhaven",
+              "canton": "New Giamouth",
               "province": "San José",
               "featured_places": [
             
@@ -675,7 +675,7 @@ Update info for existing user
               "id": 5,
               "name": "District 2",
               "description": "description 2",
-              "canton": "Micheltown",
+              "canton": "Reingerfort",
               "province": "San José",
               "featured_places": [
             
@@ -705,7 +705,7 @@ Update info for existing user
               "id": 6,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Predovictown",
+              "canton": "Marlinview",
               "province": "San José",
               "featured_places": [
             
@@ -728,7 +728,7 @@ Update info for existing user
 
     + Body
 
-            {"id":8,"name":"District 1","description":"description 1","canton":"Marishastad","province":"San José","featured_places":[]}
+            {"id":8,"name":"District 1","description":"description 1","canton":"East Norbert","province":"San José","featured_places":[]}
 
 # Group Logs
 
@@ -779,30 +779,30 @@ Update info for existing user
             {
               "id": 1,
               "description": null,
-              "latitude": "-65.698851",
-              "longitude": "-29.219738",
+              "latitude": "-15.051435",
+              "longitude": "0.975676",
               "user": {
                 "id": 1,
                 "provider": "email",
-                "uid": "shawana@nolan.info",
+                "uid": "antoine@hagenes.org",
                 "allow_password_change": false,
-                "username": "kenny",
+                "username": "tracy.reinger",
                 "image": null,
-                "email": "shawana@nolan.info",
-                "created_at": "2019-04-07T16:30:19.000Z",
-                "updated_at": "2019-04-07T16:30:19.000Z"
+                "email": "antoine@hagenes.org",
+                "created_at": "2019-04-07T16:44:03.000Z",
+                "updated_at": "2019-04-07T16:44:03.000Z"
               },
               "place": {
                 "id": 1,
-                "name": "Sugar Pizza",
-                "telephone": "(727) 596-3929",
-                "email": "shannanpadberg@waelchifarrell.biz",
-                "latitude": "44.852158",
-                "longitude": "-61.773817",
-                "address": "Green Island",
+                "name": "Green Bar & Grill",
+                "telephone": "375.023.8553 x13647",
+                "email": "eufemia@hellercormier.org",
+                "latitude": "-48.830206",
+                "longitude": "-104.146547",
+                "address": null,
                 "province": "San José",
-                "canton": "Sengerberg",
-                "district": "East Nicolasview"
+                "canton": "Diegohaven",
+                "district": "Lake Terrellville"
               }
             }
 
@@ -818,7 +818,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=58.10760006908433&log%5Blongitude%5D=-33.99309005255867&log%5Bplace%5D=2&log%5Buser%5D=3
+            log%5Blatitude%5D=0.22991655161524704&log%5Blongitude%5D=-150.51870033391273&log%5Bplace%5D=2&log%5Buser%5D=3
 
 + Response 201
 
@@ -831,18 +831,18 @@ Update info for existing user
             {
               "id": 2,
               "description": null,
-              "latitude": "58.1076",
-              "longitude": "-33.99309",
+              "latitude": "0.229917",
+              "longitude": "-150.5187",
               "user": {
                 "id": 2,
                 "provider": "email",
-                "uid": "latonia@keebler.biz",
+                "uid": "dustin@lebsack.info",
                 "allow_password_change": false,
-                "username": "liliana_welch",
+                "username": "mauro",
                 "image": null,
-                "email": "latonia@keebler.biz",
-                "created_at": "2019-04-07T16:30:20.000Z",
-                "updated_at": "2019-04-07T16:30:20.000Z"
+                "email": "dustin@lebsack.info",
+                "created_at": "2019-04-07T16:44:03.000Z",
+                "updated_at": "2019-04-07T16:44:03.000Z"
               },
               "place": null
             }
@@ -856,7 +856,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=68.14383036134595&log%5Blongitude%5D=17.030613161295406&log%5Bplace%5D=3&log%5Buser%5D=5
+            log%5Blatitude%5D=-17.075858327206703&log%5Blongitude%5D=-131.61270512774777&log%5Bplace%5D=3&log%5Buser%5D=5
 
 + Response 201
 
@@ -869,18 +869,18 @@ Update info for existing user
             {
               "id": 3,
               "description": null,
-              "latitude": "68.14383",
-              "longitude": "17.030613",
+              "latitude": "-17.075858",
+              "longitude": "-131.612705",
               "user": {
                 "id": 4,
                 "provider": "email",
-                "uid": "sabra@osinskilynch.org",
+                "uid": "pasqualesatterfield@monahan.name",
                 "allow_password_change": false,
-                "username": "eleonore_kuphal",
+                "username": "carmella",
                 "image": null,
-                "email": "sabra@osinskilynch.org",
-                "created_at": "2019-04-07T16:30:20.000Z",
-                "updated_at": "2019-04-07T16:30:21.000Z"
+                "email": "pasqualesatterfield@monahan.name",
+                "created_at": "2019-04-07T16:44:04.000Z",
+                "updated_at": "2019-04-07T16:44:04.000Z"
               },
               "place": null
             }
@@ -922,7 +922,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=-12.188232913162068&log%5Blongitude%5D=92.53152242646564&log%5Bplace%5D=4&log%5Buser%5D=7
+            log%5Blatitude%5D=-69.83376199928013&log%5Blongitude%5D=-32.03938149286785&log%5Bplace%5D=4&log%5Buser%5D=7
 
 + Response 401
 
@@ -986,15 +986,15 @@ Update info for existing user
 
             {
               "id": 5,
-              "name": "Green Spoon",
-              "telephone": "508.985.2101 x4714",
-              "email": "mohammadrolfson@vonrueden.name",
-              "latitude": "36.607233",
-              "longitude": "-131.779205",
-              "address": null,
+              "name": "Blue Kitchen",
+              "telephone": "673-891-5391",
+              "email": "nathaniel@vandervort.info",
+              "latitude": "-25.978549",
+              "longitude": "130.294171",
+              "address": "Northern Territory, Australia",
               "province": "San José",
-              "canton": "North Yuki",
-              "district": "North Gene",
+              "canton": "Port Rogeliomouth",
+              "district": "Koelpinville",
               "categories": [
             
               ]
@@ -1024,14 +1024,14 @@ Update info for existing user
               {
                 "id": 6,
                 "name": "La Princesa Marina",
-                "telephone": "689-500-7226",
-                "email": "antione@denesik.biz",
+                "telephone": "(782) 462-4400 x7098",
+                "email": "raymondlesch@reichert.name",
                 "latitude": "9.93446",
                 "longitude": "-84.110361",
                 "address": "La Princesa Marina, Avenida 4, Rancho Luna, Mata Redonda, Cantón San José, Provincia San José, 10108, Costa Rica",
                 "province": "San José",
-                "canton": "West Vicenta",
-                "district": "Emikofurt",
+                "canton": "Port Romeomouth",
+                "district": "New Laverne",
                 "categories": [
             
                 ]
@@ -1050,7 +1050,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=23&place%5Bdistrict_id%5D=15&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=50.20781993297189&place%5Blongitude%5D=176.44528777184325&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=23&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=23&place%5Bdistrict_id%5D=15&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=62.92217000316492&place%5Blongitude%5D=-137.04285441376277&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=23&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1065,12 +1065,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "50.20782",
-              "longitude": "176.445288",
-              "address": null,
+              "latitude": "62.92217",
+              "longitude": "-137.042854",
+              "address": "Yukon, Canada",
               "province": "San José",
-              "canton": "Lake Vickeymouth",
-              "district": "Considineshire",
+              "canton": "South Young",
+              "district": "Letishaburgh",
               "categories": [
             
               ]
@@ -1085,7 +1085,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=24&place%5Bdistrict_id%5D=16&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-37.226732903879&place%5Blongitude%5D=135.1299059236061&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=24&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=24&place%5Bdistrict_id%5D=16&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=62.24021408944424&place%5Blongitude%5D=148.85120987089618&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=24&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1100,12 +1100,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-37.226733",
-              "longitude": "135.129906",
-              "address": null,
+              "latitude": "62.240214",
+              "longitude": "148.85121",
+              "address": "Tenkinsky Urban District, Magadan Oblast, Far Eastern Federal District, Russia",
               "province": "San José",
-              "canton": "West Jame",
-              "district": "Perlachester",
+              "canton": "Eugeneberg",
+              "district": "Odisside",
               "categories": [
             
               ]
@@ -1120,7 +1120,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=25&place%5Bdistrict_id%5D=17&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=87.29670165434155&place%5Blongitude%5D=-86.35051747929452&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=25&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=25&place%5Bdistrict_id%5D=17&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=1.4276727279272592&place%5Blongitude%5D=-178.3330879682393&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=25&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1135,12 +1135,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "87.296702",
-              "longitude": "-86.350517",
+              "latitude": "1.427673",
+              "longitude": "-178.333088",
               "address": null,
               "province": "San José",
-              "canton": "North Evelinfurt",
-              "district": "West Marionfurt",
+              "canton": "West Omarland",
+              "district": "Theaside",
               "categories": [
             
               ]
@@ -1206,7 +1206,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=-5.410121091215146&place%5Blongitude%5D=-75.0665928315228&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
+            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=63.073953849062576&place%5Blongitude%5D=128.96612236289116&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
 
 + Response 200
 
@@ -1221,12 +1221,12 @@ Update info for existing user
               "name": "Local 2",
               "telephone": "436-604-5688",
               "email": "local2@example.com",
-              "latitude": "-5.410121",
-              "longitude": "-75.066593",
-              "address": "Parinari, Loreto, Peru",
+              "latitude": "63.073954",
+              "longitude": "128.966122",
+              "address": "Бетюнский наслег, Namsky Ulus, Sakha Republic, Far Eastern Federal District, Russia",
               "province": "San José",
-              "canton": "Noblehaven",
-              "district": "Beerhaven",
+              "canton": "Gutkowskifurt",
+              "district": "North Lavernemouth",
               "categories": [
             
               ]
@@ -1276,6 +1276,10 @@ Update info for existing user
             Content-Type: application/x-www-form-urlencoded
 
 + Response 204
+
+    + Body
+
+            {"id":14,"name":"Blue Pizza","telephone":"371.714.1854","email":"barb@littleshanahan.co","latitude":"46.705475","longitude":"70.007939","address":"Zhanaarka District, Karaganda Region, Kazakhstan","province":"San José","canton":"Lake Clarence","district":"Eldonton","categories":[]}
 
 # Group Reviews
 
@@ -1539,3 +1543,7 @@ Update info for existing user
             Content-Type: application/x-www-form-urlencoded
 
 + Response 204
+
+    + Body
+
+            {"id":8,"price":"9.99","quality":"9.99","service":"9.99","average_score":"9.99"}

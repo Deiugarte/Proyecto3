@@ -38,6 +38,10 @@ class Api::V1::PlacesController < Api::V1::ApiController
     json_response(@place.nearbys(10))
   end
 
+  def nearby
+    json_response(@place.nearbys(10))
+  end
+
   private
 
   def set_place
