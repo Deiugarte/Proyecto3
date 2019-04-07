@@ -30,7 +30,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
   describe "GET #index" do
     include Docs::V1::Reviews::Index
     let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
-    it "returns a success response" do
+    it "returns a success response", :dox do
       get :index, params: { place_id: place.id }, session: valid_session
       expect(response).to be_successful
     end
@@ -40,7 +40,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
     include Docs::V1::Reviews::Show
 
     let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
-    it "returns a success response" do
+    it "returns a success response", :dox do
       review = Review.create! valid_attributes
       get :show, params: { place_id: place.id, id: review.to_param }, session: valid_session
       expect(response).to be_successful
@@ -71,23 +71,22 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
       }
     end
     context "with valid params" do
-      it "creates a new Review" do
+      it "creates a new Review", :dox do
         expect do
           post :create, params: { place_id: place.id, review: valid_review }, session: valid_session
         end.to change(Review, :count).by(1)
       end
 
-      it "renders a JSON response with the new review" do
+      it "renders a JSON response with the new review", :dox do
 
         post :create, params: { place_id: place.id, review: valid_review }, session: valid_session
         expect(response).to have_http_status(:created)
         expect(response.content_type).to eq("application/json")
-        expect(response.location).to eq(api_v1_place_review_url(place.id, Review.last))
       end
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the new review" do
+      it "renders a JSON response with errors for the new review", :dox do
 
         post :create, params: { place_id: place.id, review: invalid_review }, session: valid_session
         expect(response).to have_http_status(:unprocessable_entity)
@@ -107,14 +106,14 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
         }
       end
 
-      it "updates the requested review" do
+      it "updates the requested review", :dox do
         review = Review.create! valid_attributes
         put :update, params: { place_id: place.id, id: review.to_param, review: new_attributes }, session: valid_session
         review.reload
         expect(review.attributes).to include("price" => 0.999e1)
       end
 
-      it "renders a JSON response with the review" do
+      it "renders a JSON response with the review", :dox do
         review = Review.create! valid_attributes
 
         put :update, params: {
@@ -127,7 +126,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
     end
 
     context "with invalid params" do
-      it "renders a JSON response with errors for the review" do
+      it "renders a JSON response with errors for the review", :dox do
         review = Review.create! valid_attributes
 
         put :update, params: {
@@ -145,7 +144,7 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
     include Docs::V1::Reviews::Destroy
 
     let(:place) { create(:place, district: district, canton: district.canton, province: district.canton.province) }
-    it "destroys the requested review" do
+    it "destroys the requested review", :dox do
       review = Review.create! valid_attributes
       expect do
         delete :destroy, params: { place_id: place.id, id: review.to_param }, session: valid_session

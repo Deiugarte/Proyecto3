@@ -40,8 +40,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:22:11.000Z",
-                "updated_at": "2019-04-07T16:22:11.000Z"
+                "created_at": "2019-04-07T16:30:46.000Z",
+                "updated_at": "2019-04-07T16:30:46.000Z"
               }
             }
 
@@ -74,8 +74,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:22:11.000Z",
-                "updated_at": "2019-04-07T16:22:12.000Z"
+                "created_at": "2019-04-07T16:30:46.000Z",
+                "updated_at": "2019-04-07T16:30:46.000Z"
               }
             }
 
@@ -108,8 +108,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:22:12.000Z",
-                "updated_at": "2019-04-07T16:22:12.000Z"
+                "created_at": "2019-04-07T16:30:46.000Z",
+                "updated_at": "2019-04-07T16:30:46.000Z"
               }
             }
 
@@ -142,8 +142,8 @@ Registration for new user
                 "username": "billgates",
                 "image": null,
                 "email": "billgates@email.com",
-                "created_at": "2019-04-07T16:22:12.000Z",
-                "updated_at": "2019-04-07T16:22:12.000Z"
+                "created_at": "2019-04-07T16:30:46.000Z",
+                "updated_at": "2019-04-07T16:30:46.000Z"
               }
             }
 
@@ -173,14 +173,14 @@ Update info for existing user
               "status": "success",
               "data": {
                 "id": 30,
-                "email": "hollyturcotte@wolf.com",
+                "email": "major@cruickshank.biz",
                 "provider": "email",
-                "username": "weldon.nienow",
-                "uid": "hollyturcotte@wolf.com",
+                "username": "jimmy.ohara",
+                "uid": "major@cruickshank.biz",
                 "allow_password_change": false,
                 "image": null,
-                "created_at": "2019-04-07T16:22:12.000Z",
-                "updated_at": "2019-04-07T16:22:12.000Z"
+                "created_at": "2019-04-07T16:30:46.000Z",
+                "updated_at": "2019-04-07T16:30:46.000Z"
               }
             }
 
@@ -319,6 +319,10 @@ Update info for existing user
             Content-Type: application/x-www-form-urlencoded
 
 + Response 204
+
+    + Body
+
+            {"id":8,"name":"Local 1","description":"description 1","province":"San José","featured_places":[]}
 
 # Group Categories
 
@@ -489,6 +493,10 @@ Update info for existing user
 
 + Response 204
 
+    + Body
+
+            {"id":7,"name":"Category 1","subcategories":[],"places":[]}
+
 # Group Districts
 
 
@@ -539,7 +547,7 @@ Update info for existing user
               "id": 1,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Lake Daniafurt",
+              "canton": "Alitafort",
               "province": "San José",
               "featured_places": [
             
@@ -572,7 +580,7 @@ Update info for existing user
               "id": 2,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Russellhaven",
+              "canton": "Port Adan",
               "province": "San José",
               "featured_places": [
             
@@ -602,7 +610,7 @@ Update info for existing user
               "id": 3,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Lake Hanaville",
+              "canton": "Nolaland",
               "province": "San José",
               "featured_places": [
             
@@ -632,7 +640,7 @@ Update info for existing user
               "id": 4,
               "name": "District 1",
               "description": "description 1",
-              "canton": "West Curtiston",
+              "canton": "Ivanhaven",
               "province": "San José",
               "featured_places": [
             
@@ -667,7 +675,7 @@ Update info for existing user
               "id": 5,
               "name": "District 2",
               "description": "description 2",
-              "canton": "Luettgenfort",
+              "canton": "Micheltown",
               "province": "San José",
               "featured_places": [
             
@@ -697,7 +705,7 @@ Update info for existing user
               "id": 6,
               "name": "District 1",
               "description": "description 1",
-              "canton": "Hanebury",
+              "canton": "Predovictown",
               "province": "San José",
               "featured_places": [
             
@@ -717,6 +725,10 @@ Update info for existing user
             Content-Type: application/x-www-form-urlencoded
 
 + Response 204
+
+    + Body
+
+            {"id":8,"name":"District 1","description":"description 1","canton":"Marishastad","province":"San José","featured_places":[]}
 
 # Group Logs
 
@@ -767,30 +779,30 @@ Update info for existing user
             {
               "id": 1,
               "description": null,
-              "latitude": "12.165582",
-              "longitude": "35.054663",
+              "latitude": "-65.698851",
+              "longitude": "-29.219738",
               "user": {
                 "id": 1,
                 "provider": "email",
-                "uid": "jacques@weinat.name",
+                "uid": "shawana@nolan.info",
                 "allow_password_change": false,
-                "username": "josue",
+                "username": "kenny",
                 "image": null,
-                "email": "jacques@weinat.name",
-                "created_at": "2019-04-07T16:21:45.000Z",
-                "updated_at": "2019-04-07T16:21:45.000Z"
+                "email": "shawana@nolan.info",
+                "created_at": "2019-04-07T16:30:19.000Z",
+                "updated_at": "2019-04-07T16:30:19.000Z"
               },
               "place": {
                 "id": 1,
-                "name": "Silver Creamery",
-                "telephone": "1-658-780-2608 x8079",
-                "email": "willlockman@schoen.name",
-                "latitude": "-2.942166",
-                "longitude": "158.578966",
-                "address": null,
+                "name": "Sugar Pizza",
+                "telephone": "(727) 596-3929",
+                "email": "shannanpadberg@waelchifarrell.biz",
+                "latitude": "44.852158",
+                "longitude": "-61.773817",
+                "address": "Green Island",
                 "province": "San José",
-                "canton": "Herzogmouth",
-                "district": "Robertsfort"
+                "canton": "Sengerberg",
+                "district": "East Nicolasview"
               }
             }
 
@@ -806,7 +818,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=25.3771909734035&log%5Blongitude%5D=168.01926764497694&log%5Bplace%5D=2&log%5Buser%5D=3
+            log%5Blatitude%5D=58.10760006908433&log%5Blongitude%5D=-33.99309005255867&log%5Bplace%5D=2&log%5Buser%5D=3
 
 + Response 201
 
@@ -819,18 +831,18 @@ Update info for existing user
             {
               "id": 2,
               "description": null,
-              "latitude": "25.377191",
-              "longitude": "168.019268",
+              "latitude": "58.1076",
+              "longitude": "-33.99309",
               "user": {
                 "id": 2,
                 "provider": "email",
-                "uid": "marinaklein@stracke.name",
+                "uid": "latonia@keebler.biz",
                 "allow_password_change": false,
-                "username": "tracy_ernser",
+                "username": "liliana_welch",
                 "image": null,
-                "email": "marinaklein@stracke.name",
-                "created_at": "2019-04-07T16:21:45.000Z",
-                "updated_at": "2019-04-07T16:21:45.000Z"
+                "email": "latonia@keebler.biz",
+                "created_at": "2019-04-07T16:30:20.000Z",
+                "updated_at": "2019-04-07T16:30:20.000Z"
               },
               "place": null
             }
@@ -844,7 +856,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=45.33189024565783&log%5Blongitude%5D=-62.87565491690003&log%5Bplace%5D=3&log%5Buser%5D=5
+            log%5Blatitude%5D=68.14383036134595&log%5Blongitude%5D=17.030613161295406&log%5Bplace%5D=3&log%5Buser%5D=5
 
 + Response 201
 
@@ -857,18 +869,18 @@ Update info for existing user
             {
               "id": 3,
               "description": null,
-              "latitude": "45.33189",
-              "longitude": "-62.875655",
+              "latitude": "68.14383",
+              "longitude": "17.030613",
               "user": {
                 "id": 4,
                 "provider": "email",
-                "uid": "cythia@buckridgecummerata.org",
+                "uid": "sabra@osinskilynch.org",
                 "allow_password_change": false,
-                "username": "erick.stiedemann",
+                "username": "eleonore_kuphal",
                 "image": null,
-                "email": "cythia@buckridgecummerata.org",
-                "created_at": "2019-04-07T16:21:46.000Z",
-                "updated_at": "2019-04-07T16:21:46.000Z"
+                "email": "sabra@osinskilynch.org",
+                "created_at": "2019-04-07T16:30:20.000Z",
+                "updated_at": "2019-04-07T16:30:21.000Z"
               },
               "place": null
             }
@@ -910,7 +922,7 @@ Update info for existing user
 
     + Body
 
-            log%5Blatitude%5D=-40.818796739374534&log%5Blongitude%5D=136.48335712339968&log%5Bplace%5D=4&log%5Buser%5D=7
+            log%5Blatitude%5D=-12.188232913162068&log%5Blongitude%5D=92.53152242646564&log%5Bplace%5D=4&log%5Buser%5D=7
 
 + Response 401
 
@@ -974,15 +986,15 @@ Update info for existing user
 
             {
               "id": 5,
-              "name": "42 Grill",
-              "telephone": "314.147.0821 x690",
-              "email": "joshua@watsicafarrell.co",
-              "latitude": "-25.593541",
-              "longitude": "165.970667",
+              "name": "Green Spoon",
+              "telephone": "508.985.2101 x4714",
+              "email": "mohammadrolfson@vonrueden.name",
+              "latitude": "36.607233",
+              "longitude": "-131.779205",
               "address": null,
               "province": "San José",
-              "canton": "Latashaborough",
-              "district": "New Bart",
+              "canton": "North Yuki",
+              "district": "North Gene",
               "categories": [
             
               ]
@@ -1012,14 +1024,14 @@ Update info for existing user
               {
                 "id": 6,
                 "name": "La Princesa Marina",
-                "telephone": "208-703-8899",
-                "email": "kristophervolkman@gaylord.co",
+                "telephone": "689-500-7226",
+                "email": "antione@denesik.biz",
                 "latitude": "9.93446",
                 "longitude": "-84.110361",
                 "address": "La Princesa Marina, Avenida 4, Rancho Luna, Mata Redonda, Cantón San José, Provincia San José, 10108, Costa Rica",
                 "province": "San José",
-                "canton": "Lake Genesisfort",
-                "district": "South Lawerencetown",
+                "canton": "West Vicenta",
+                "district": "Emikofurt",
                 "categories": [
             
                 ]
@@ -1038,7 +1050,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=23&place%5Bdistrict_id%5D=15&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-11.203209012579734&place%5Blongitude%5D=-132.88148952137408&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=23&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=23&place%5Bdistrict_id%5D=15&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=50.20781993297189&place%5Blongitude%5D=176.44528777184325&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=23&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1053,12 +1065,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-11.203209",
-              "longitude": "-132.88149",
+              "latitude": "50.20782",
+              "longitude": "176.445288",
               "address": null,
               "province": "San José",
-              "canton": "West Pattyburgh",
-              "district": "Linneaburgh",
+              "canton": "Lake Vickeymouth",
+              "district": "Considineshire",
               "categories": [
             
               ]
@@ -1073,7 +1085,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=24&place%5Bdistrict_id%5D=16&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-73.59334101971588&place%5Blongitude%5D=28.255949858904103&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=24&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=24&place%5Bdistrict_id%5D=16&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-37.226732903879&place%5Blongitude%5D=135.1299059236061&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=24&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1088,12 +1100,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-73.593341",
-              "longitude": "28.25595",
+              "latitude": "-37.226733",
+              "longitude": "135.129906",
               "address": null,
               "province": "San José",
-              "canton": "Wuckertton",
-              "district": "Koeppberg",
+              "canton": "West Jame",
+              "district": "Perlachester",
               "categories": [
             
               ]
@@ -1108,7 +1120,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bcanton_id%5D=25&place%5Bdistrict_id%5D=17&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=-66.27299527507762&place%5Blongitude%5D=38.73469122599573&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=25&place%5Btelephone%5D=435-604-5688
+            place%5Bcanton_id%5D=25&place%5Bdistrict_id%5D=17&place%5Bemail%5D=local1%40example.com&place%5Blatitude%5D=87.29670165434155&place%5Blongitude%5D=-86.35051747929452&place%5Bname%5D=Local+1&place%5Bprovince_id%5D=25&place%5Btelephone%5D=435-604-5688
 
 + Response 201
 
@@ -1123,12 +1135,12 @@ Update info for existing user
               "name": "Local 1",
               "telephone": "435-604-5688",
               "email": "local1@example.com",
-              "latitude": "-66.272995",
-              "longitude": "38.734691",
+              "latitude": "87.296702",
+              "longitude": "-86.350517",
               "address": null,
               "province": "San José",
-              "canton": "Beataville",
-              "district": "Deloresfort",
+              "canton": "North Evelinfurt",
+              "district": "West Marionfurt",
               "categories": [
             
               ]
@@ -1194,7 +1206,7 @@ Update info for existing user
 
     + Body
 
-            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=64.74943445766837&place%5Blongitude%5D=-175.16152797124684&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
+            place%5Bemail%5D=local2%40example.com&place%5Blatitude%5D=-5.410121091215146&place%5Blongitude%5D=-75.0665928315228&place%5Bname%5D=Local+2&place%5Btelephone%5D=436-604-5688
 
 + Response 200
 
@@ -1209,12 +1221,12 @@ Update info for existing user
               "name": "Local 2",
               "telephone": "436-604-5688",
               "email": "local2@example.com",
-              "latitude": "64.749434",
-              "longitude": "-175.161528",
-              "address": "Providensky urban district, Chukotka Autonomous Okrug, Far Eastern Federal District, 689251, Russia",
+              "latitude": "-5.410121",
+              "longitude": "-75.066593",
+              "address": "Parinari, Loreto, Peru",
               "province": "San José",
-              "canton": "Lake Davis",
-              "district": "Janettabury",
+              "canton": "Noblehaven",
+              "district": "Beerhaven",
               "categories": [
             
               ]
@@ -1258,6 +1270,269 @@ Update info for existing user
 
 + Request destroys the requested place
 **DELETE**&nbsp;&nbsp;`/api/v1/places/14`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
++ Response 204
+
+# Group Reviews
+
+
+## Reviews [/places/1/reviews]
+### Resource for Reviews
+
+### Get reviews [GET /api/v1/places/{place_id}/reviews]
+
++ Parameters
+    + place_id: `15` (number, required)
+
++ Request returns a success response
+**GET**&nbsp;&nbsp;`/api/v1/places/15/reviews`
+
+    + Headers
+
+
+
++ Response 200
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+
+
+### Get a review [GET /api/v1/places/{place_id}/reviews/{id}]
+
++ Parameters
+    + place_id: `17` (number, required)
+    + id: `1` (number, required)
+
++ Request returns a success response
+**GET**&nbsp;&nbsp;`/api/v1/places/17/reviews/1`
+
+    + Headers
+
+
+
++ Response 200
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 1,
+              "price": "9.99",
+              "quality": "9.99",
+              "service": "9.99",
+              "average_score": "9.99"
+            }
+
+### Create a review [POST /api/v1/places/{place_id}/reviews]
+
++ Parameters
+    + place_id: `18` (number, required)
+
++ Request creates a new Review
+**POST**&nbsp;&nbsp;`/api/v1/places/18/reviews`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Baverage_score%5D=9.99&review%5Bplace_id%5D=18&review%5Bprice%5D=9.99&review%5Bquality%5D=9.99&review%5Bservice%5D=9.99&review%5Buser_id%5D=11
+
++ Response 201
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 2,
+              "price": "9.99",
+              "quality": "9.99",
+              "service": "9.99",
+              "average_score": "9.99"
+            }
+
++ Request renders a JSON response with the new review
+**POST**&nbsp;&nbsp;`/api/v1/places/19/reviews`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Baverage_score%5D=9.99&review%5Bplace_id%5D=19&review%5Bprice%5D=9.99&review%5Bquality%5D=9.99&review%5Bservice%5D=9.99&review%5Buser_id%5D=13
+
++ Response 201
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 3,
+              "price": "9.99",
+              "quality": "9.99",
+              "service": "9.99",
+              "average_score": "9.99"
+            }
+
++ Request renders a JSON response with errors for the new review
+**POST**&nbsp;&nbsp;`/api/v1/places/20/reviews`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Bprice%5D=
+
++ Response 422
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "quality": [
+                "can't be blank"
+              ],
+              "service": [
+                "can't be blank"
+              ],
+              "price": [
+                "can't be blank"
+              ],
+              "average_score": [
+                "can't be blank"
+              ]
+            }
+
+### Update a review [PUT /api/v1/places/{place_id}/reviews/{id}]
+
++ Parameters
+    + place_id: `22` (number, required)
+    + id: `4` (number, required)
+
++ Request updates the requested review
+**PUT**&nbsp;&nbsp;`/api/v1/places/22/reviews/4`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Bprice%5D=2.0
+
++ Response 422
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "quality": [
+                "can't be blank"
+              ],
+              "service": [
+                "can't be blank"
+              ],
+              "average_score": [
+                "can't be blank"
+              ]
+            }
+
++ Request renders a JSON response with the review
+**PUT**&nbsp;&nbsp;`/api/v1/places/24/reviews/5`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Baverage_score%5D=9.99&review%5Bplace%5D=23&review%5Bprice%5D=9.99&review%5Bquality%5D=9.99&review%5Bservice%5D=9.99&review%5Buser%5D=20
+
++ Response 200
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "id": 6,
+              "price": "9.99",
+              "quality": "9.99",
+              "service": "9.99",
+              "average_score": "9.99"
+            }
+
++ Request renders a JSON response with errors for the review
+**PUT**&nbsp;&nbsp;`/api/v1/places/26/reviews/7`
+
+    + Headers
+
+            Content-Type: application/x-www-form-urlencoded
+
+    + Body
+
+            review%5Bprice%5D=
+
++ Response 422
+
+    + Headers
+
+            Content-Type: application/json; charset=utf-8
+
+    + Body
+
+            {
+              "quality": [
+                "can't be blank"
+              ],
+              "service": [
+                "can't be blank"
+              ],
+              "price": [
+                "can't be blank"
+              ],
+              "average_score": [
+                "can't be blank"
+              ]
+            }
+
+### Delete a review [DELETE /api/v1/places/{place_id}/reviews/{id}]
+
++ Parameters
+    + place_id: `28` (number, required)
+    + id: `8` (number, required)
+
++ Request destroys the requested review
+**DELETE**&nbsp;&nbsp;`/api/v1/places/28/reviews/8`
 
     + Headers
 

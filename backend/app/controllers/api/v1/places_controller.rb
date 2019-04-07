@@ -31,7 +31,7 @@ class Api::V1::PlacesController < Api::V1::ApiController
   end
 
   def destroy
-    @place.destroy
+    json_response(@place.destroy, 204)
   end
 
   def nearby
