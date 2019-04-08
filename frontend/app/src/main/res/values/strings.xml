@@ -35,4 +35,9 @@
     <string name="restaurant">Restaurant</string>
     <string name="lodging">Lodging</string>
     <string name="Place_Detail">Place Detail</string>
+    <string name="title_activity_list_of_places">listOfPlaces</string>
+    <string name="place_by_name">PlacesByName</string>
+    <string name="titlePlace">titlePlace</string>
+    <string name="imagePlace">imagePlace</string>
+    <string name="places">Places</string>
 </resources>
