@@ -17,8 +17,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            titlePlace = (TextView)itemView.findViewById(R.id.titlePlace);
-            imageView = (ImageView)itemView.findViewById(R.id.imgPlace);
+            titlePlace = itemView.findViewById(R.id.titlePlace);
+            //imageView = itemView.findViewById(R.id.imgPlace);
 
         }
     }
@@ -40,7 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder( ViewHolder viewHolder, int position) {
         viewHolder.titlePlace.setText(placeList.get(position).getTitlePlace());
-        viewHolder.imageView.setImageResource(placeList.get(position).getImgPlace());
+       // viewHolder.imageView.setImageResource(placeList.get(position).getImgPlace());
     }
 
     @Override

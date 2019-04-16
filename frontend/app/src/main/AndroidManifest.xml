@@ -25,6 +25,7 @@
         <activity android:name=".LodgingList" />
         <activity android:name=".ActivityList" />
         <activity android:name=".PlaceDetailsActivity" />
+        <activity android:name=".PlacesByName"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

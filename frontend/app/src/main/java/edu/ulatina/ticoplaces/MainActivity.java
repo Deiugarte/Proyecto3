@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         placeDetailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
