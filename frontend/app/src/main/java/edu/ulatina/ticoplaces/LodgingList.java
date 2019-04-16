@@ -10,4 +10,8 @@ public class LodgingList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lodging_list);
     }
+
+    
+
+
 }
