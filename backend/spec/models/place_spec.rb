@@ -14,6 +14,7 @@
 #  canton_id   :bigint(8)
 #  district_id :bigint(8)
 #  address     :text(65535)
+#  description :text(65535)
 #
 
 require "rails_helper"

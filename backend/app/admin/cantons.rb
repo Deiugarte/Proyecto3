@@ -1,5 +1,4 @@
 ActiveAdmin.register Canton do
-  config.per_page = 30
   permit_params :name, :description, :province_id
 
   index do
