@@ -67,7 +67,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
             Fragment fragment = null;
             switch (position){
                 case 0:
-                    fragment = RatingFragment.newInstance();
+                    fragment = OverviewFragment.newInstance();
                     break;
                 case 1:
                     fragment = RatingFragment.newInstance();
