@@ -5,43 +5,47 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
     android:background="@color/colorPrimaryDark"
-    tools:context=".PlaceDetailsActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".PlaceDetailsActivity"
+    tools:openDrawer="start">
 
     <ImageView
         android:id="@+id/pic"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/lodging2"
         android:layout_marginLeft="200dp"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="500dp"/>
+        android:layout_marginBottom="500dp"
+        android:src="@drawable/lodging2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:text="Pewdiepie"
-        android:textSize="35dp"
-        android:layout_marginRight="@+id/pic"
-        android:layout_marginTop="50dp"/>
+        android:textSize="35dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         android:text="Subscribe"
-        android:textSize="35dp"
-        android:layout_marginRight="@+id/pic"
-        android:layout_marginTop="100dp"/>
+        android:textSize="35dp" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:text="88m"
-        android:textSize="35dp"
-        android:layout_marginRight="@+id/pic"
-        android:layout_marginTop="150dp"/>
+        android:textSize="35dp" />
+
+    <!--An enclosing ConstraintLayout that is in the frontend project may need to go here -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tablayout"
@@ -50,52 +54,52 @@
         app:tabSelectedTextColor="@android:color/white"
         app:tabTextColor="@android:color/black">
 
-    <android.support.design.widget.TabItem
-        android:id="@+id/fTab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Overview"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/fTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overview" />
 
-    <android.support.design.widget.TabItem
-        android:id="@+id/sTab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Photos"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/sTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos" />
 
-    <android.support.design.widget.TabItem
-        android:id="@+id/tTab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rating"/>
+        <android.support.design.widget.TabItem
+            android:id="@+id/tTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating" />
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="500dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="0dp">
         <!--<include-->
-            <!--layout="@layout/activity_rate"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent" />-->
+        <!--layout="@layout/activity_rate"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
     </android.support.v7.widget.LinearLayoutCompat>
 
 
     <!--<android.support.design.widget.NavigationView-->
-        <!--android:id="@+id/nav_view"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:orientation="horizontal"-->
-        <!--android:fitsSystemWindows="true"-->
-        <!--app:headerLayout="@layout/nav_header_place_details"-->
-        <!--app:menu="@menu/activity_place_details_drawer" />-->
+    <!--android:id="@+id/nav_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:headerLayout="@layout/nav_header_place_details"-->
+    <!--app:menu="@menu/activity_place_details_drawer" />-->
 
 </android.support.v4.widget.DrawerLayout>

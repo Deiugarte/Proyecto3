@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         placeDetailBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, PlacesByName.class);
+                Intent intent = new Intent(MainActivity.this, PlaceDetailsActivity.class);
                 Bundle bundle = new Bundle();
                 intent.putExtras(bundle);
                 startActivity(intent);
