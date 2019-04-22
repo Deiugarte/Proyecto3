@@ -36,6 +36,7 @@ es:
         canton: "Cantón"
         district: "Distrito"
         categories: "Categorias"
+        description: "Descripción"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
       canton:
@@ -76,6 +77,7 @@ es:
         updated_at: "Actualizado en:"
       category:
         name: "Nombre"
+        ancestry: "Categoria Padre"
         places: "Lugares"
         created_at: "Fecha Creación"
         updated_at: "Actualizado en:"
