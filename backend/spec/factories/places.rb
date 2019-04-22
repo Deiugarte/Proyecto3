@@ -14,6 +14,7 @@
 #  canton_id   :bigint(8)
 #  district_id :bigint(8)
 #  address     :text(65535)
+#  description :text(65535)
 #
 
 FactoryBot.define do
@@ -23,6 +24,7 @@ FactoryBot.define do
     email { Faker::Internet.email }
     latitude { Faker::Address.latitude }
     longitude { Faker::Address.longitude }
+    description { Faker::Lorem.paragraph }
     province
     canton
     district

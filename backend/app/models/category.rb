@@ -16,4 +16,8 @@ class Category < ApplicationRecord
   has_many :places, -> { distinct }, through: :category_places
   has_ancestry
 
+  def subcategory?
+    ancestry != nil
+  end
+
 end

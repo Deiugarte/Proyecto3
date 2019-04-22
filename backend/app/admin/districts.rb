@@ -1,5 +1,4 @@
 ActiveAdmin.register District do
-  config.per_page = 30
   permit_params :name, :description, :canton_id
 
   index do
