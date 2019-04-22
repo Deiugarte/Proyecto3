@@ -20,31 +20,34 @@
             android:id="@+id/pic"
             android:layout_width="163dp"
             android:layout_height="135dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="500dp"
             android:src="@drawable/lodging2" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:text="Name"
-        android:textSize="35dp" />
+        <TextView
+            android:id="@+id/placeNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="667dp"
+            android:layout_marginTop="10dp"
+            android:text="Name"
+            android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:text="Category/Affordability"
-        android:textSize="35dp" />
+        <TextView
+            android:id="@+id/categoryTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:text="Category"
+            android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:text="Distance"
-        android:textSize="35dp" />
+        <TextView
+            android:id="@+id/addressTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:text="Address"
+            android:textSize="15dp" />
 
     </FrameLayout>
 
