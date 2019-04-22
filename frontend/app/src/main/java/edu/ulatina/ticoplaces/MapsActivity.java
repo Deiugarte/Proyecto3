@@ -70,15 +70,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 switch (menuItem.getItemId()){
 
                     case R.id.action_hotel:
-                        nearByPlace("hotel");
+                        nearByPlace("Stay");
                         break;
 
                     case R.id.action_restaurant:
-                        nearByPlace("restaurant");
+                        nearByPlace("Eat");
                         break;
 
                     case R.id.action_other:
-                        nearByPlace("other");
+                        nearByPlace("Other");
                         break;
                      default:
                          break;

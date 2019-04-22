@@ -1,79 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/home_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <Button
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginLeft="141dp"
-        android:layout_marginTop="69dp"
-        android:text="@string/log_in"
+    <edu.ulatina.ticoplaces.IntroVideoView
+        android:id="@+id/introVideoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/log_in" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/mapabtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/title_activity_maps"
-        app:layout_constraintStart_toStartOf="@+id/loginbtn"
-        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
-        tools:text="@string/title_activity_maps" />
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/cast_expanded_controller_ad_label_background_color"
+        android:text="Login"
+        android:textColor="@color/cast_libraries_material_featurehighlight_text_body_color"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnDiscover"
+        app:layout_constraintEnd_toStartOf="@+id/btnDiscover"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/reviewbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:text="@string/review"
-        app:layout_constraintStart_toStartOf="@+id/mapabtn"
-        app:layout_constraintTop_toBottomOf="@+id/mapabtn"
-        tools:text="@string/review" />
+        android:id="@+id/btnDiscover"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/cast_expanded_controller_ad_container_white_stripe_color"
+        android:text="Discover"
+        android:textColor="@color/cast_expanded_controller_text_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLogin" />
 
-    <Button
-        android:id="@+id/btnSignUp"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:text="@string/sign_up"
-        app:layout_constraintStart_toStartOf="@+id/reviewbtn"
-        app:layout_constraintTop_toBottomOf="@+id/reviewbtn"
-        tools:text="@string/sign_up" />
-
-    <Button
-        android:id="@+id/btnCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:text="@string/title_activity_category"
-        app:layout_constraintStart_toStartOf="@+id/btnSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
-
-    <Button
-        android:id="@+id/btnPlcDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/Place_Detail"
-        app:layout_constraintStart_toStartOf="@+id/btnCategory"
-        app:layout_constraintTop_toBottomOf="@+id/btnCategory"
-        tools:text="Place Detail" />
-
-    <Button
-        android:id="@+id/btnPlaces"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:text="@string/places"
-        app:layout_constraintStart_toStartOf="@+id/btnSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"/>
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TICOPLACES"
+        android:textAlignment="center"
+        android:textColor="@color/cast_expanded_controller_text_color"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/introVideoView"
+        app:layout_constraintEnd_toEndOf="@+id/introVideoView"
+        app:layout_constraintStart_toStartOf="@+id/introVideoView"
+        app:layout_constraintTop_toTopOf="@+id/introVideoView" />
 
 </android.support.constraint.ConstraintLayout>

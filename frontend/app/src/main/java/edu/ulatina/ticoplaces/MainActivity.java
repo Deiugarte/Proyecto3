@@ -13,17 +13,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button loginBtn = findViewById(R.id.loginbtn);
-        Button mapaBtn = findViewById(R.id.mapabtn);
-        Button reviewBtn = findViewById(R.id.reviewbtn);
-        Button signUpBtn = findViewById(R.id.btnSignUp);
-        Button categoryBtn = findViewById(R.id.btnCategory);
-        Button placeDetailBtn = findViewById(R.id.btnPlcDetail);
-        Button placeBtn =findViewById(R.id.btnPlaces);
-
-
-
-
+      Button loginBtn = findViewById(R.id.btnLogin);
+//        Button mapaBtn = findViewById(R.id.mapabtn);
+//        Button reviewBtn = findViewById(R.id.reviewbtn);
+//        Button signUpBtn = findViewById(R.id.btnSignUp);
+//        Button categoryBtn = findViewById(R.id.btnCategory);
+ //       Button placeDetailBtn = findViewById(R.id.btnDiscover);
+        Button placeBtn =findViewById(R.id.btnDiscover);
+//
+//
+//
+//
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,38 +33,38 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        mapaBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
-                Bundle bundle = new Bundle();
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-
-        reviewBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Rate.class);
-                Bundle bundle = new Bundle();
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
-                Bundle bundle = new Bundle();
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
-
-        categoryBtn.setOnClickListener(new View.OnClickListener() {
+//
+//        mapaBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+//                Bundle bundle = new Bundle();
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        reviewBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, Rate.class);
+//                Bundle bundle = new Bundle();
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        signUpBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+//                Bundle bundle = new Bundle();
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+//            }
+//        });
+//
+        placeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Category.class);
@@ -73,16 +73,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        placeDetailBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, PlaceDetailsActivity.class);
-                Bundle bundle = new Bundle();
-                intent.putExtras(bundle);
-                startActivity(intent);
-            }
-        });
+//
+//        placeDetailBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, PlacesByName.class);
+//                Bundle bundle = new Bundle();
+//                intent.putExtras(bundle);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }

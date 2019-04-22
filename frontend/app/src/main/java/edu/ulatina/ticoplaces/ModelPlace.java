@@ -3,16 +3,18 @@ package edu.ulatina.ticoplaces;
 public class ModelPlace {
     private String titlePlace;
     private int imgPlace;
+    private int id;
 
-    public ModelPlace(){
 
+    public ModelPlace(int id, String titlePlace, int imgPlace) {
+        this.titlePlace = titlePlace;
+        this.imgPlace = imgPlace;
+        this.id = id;
 
     }
 
-    public ModelPlace(String titlePlace, int imgPlace) {
-        this.titlePlace = titlePlace;
-        this.imgPlace = imgPlace;
-
+    public int getId() {
+        return id;
     }
 
     public String getTitlePlace() {

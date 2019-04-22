@@ -28,7 +28,7 @@ public class Category extends AppCompatActivity {
         btnRestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Category.this,FoodAndDrinkList.class));
+                startActivity(new Intent(Category.this,PlacesByName.class));
 
             }
         });
@@ -36,7 +36,7 @@ public class Category extends AppCompatActivity {
         btnLodging.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Category.this,LodgingList.class));
+                startActivity(new Intent(Category.this,PlacesByName.class));
 
             }
         });
@@ -44,7 +44,7 @@ public class Category extends AppCompatActivity {
         btnActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Category.this,ActivityList.class));
+                startActivity(new Intent(Category.this,PlacesByName.class));
 
             }
         });

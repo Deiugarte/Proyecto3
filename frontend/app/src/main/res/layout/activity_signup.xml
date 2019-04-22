@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/cast_intro_overlay_button_background_color">
 
     <EditText
         android:id="@+id/txtSGName"
@@ -39,16 +39,16 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:inputType="textWebEmailAddress"
-        tools:textColorHint="@color/cast_expanded_controller_background_color"
+        android:textColor="@color/cast_expanded_controller_background_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSGName"
-        android:autofillHints="" />
+        tools:textColorHint="@color/cast_expanded_controller_background_color" />
 
     <EditText
         android:id="@+id/txtSGPassword"
@@ -58,17 +58,17 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
-        android:textColor="@color/cast_expanded_controller_background_color"
         android:inputType="textPassword"
-        tools:textColorHint="@color/cast_expanded_controller_background_color"
+        android:textColor="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toTopOf="@+id/txtSGConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSGEmail"
-        android:autofillHints="" />
+        tools:textColorHint="@color/cast_expanded_controller_background_color" />
 
     <EditText
         android:id="@+id/txtSGConfirmPassword"
@@ -80,17 +80,17 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/confirm_password"
-        android:textColor="@color/cast_expanded_controller_background_color"
-        tools:textColorHint="@color/cast_expanded_controller_background_color"
         android:inputType="textPassword"
+        android:textColor="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toTopOf="@+id/txtSGDoB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSGPassword"
-        android:autofillHints="" />
+        tools:textColorHint="@color/cast_expanded_controller_background_color" />
 
     <EditText
         android:id="@+id/txtSGDoB"
@@ -101,16 +101,16 @@
         android:layout_marginEnd="35dp"
         android:layout_marginRight="35dp"
         android:layout_marginBottom="228dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/date_of_birth_dd_mm_yyyy"
         android:inputType="text"
         android:textColor="@color/cast_expanded_controller_background_color"
-        tools:textColorHint="@color/cast_expanded_controller_background_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        tools:textColorHint="@color/cast_expanded_controller_background_color" />
 
     <Spinner
         android:id="@+id/spinner1"

@@ -1,5 +1,7 @@
 package edu.ulatina.ticoplaces;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +16,24 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView titlePlace;
         ImageView imageView;
+        TextView idPlace;
 
         public ViewHolder(View itemView) {
             super(itemView);
             titlePlace = itemView.findViewById(R.id.titlePlace);
-            //imageView = itemView.findViewById(R.id.imgPlace);
+            imageView = itemView.findViewById(R.id.imgPlace);
+            idPlace = itemView.findViewById(R.id.idPlace);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), PlaceDetailsActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("id", Integer.parseInt(idPlace.getText().toString()));
+                    intent.putExtras(bundle);
+                    view.getContext().startActivity(intent);
+                }
+            });
 
         }
     }
@@ -40,11 +55,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder( ViewHolder viewHolder, int position) {
         viewHolder.titlePlace.setText(placeList.get(position).getTitlePlace());
-       // viewHolder.imageView.setImageResource(placeList.get(position).getImgPlace());
+        viewHolder.imageView.setImageResource(placeList.get(position).getImgPlace());
+        viewHolder.idPlace.setText("" + placeList.get(position).getId());
     }
 
     @Override
     public int getItemCount() {
         return placeList.size();
     }
+
+
+
 }

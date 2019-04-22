@@ -8,26 +8,38 @@ android:orientation="vertical"
 tools:context=".Category">
 
 
-    <ImageButton
-        android:id="@+id/ibRestaurant"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="195dp"
-        android:contentDescription="@string/restaurant"
-        app:srcCompat="@drawable/restaurant" />
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/ibLodging"
-        android:layout_width="match_parent"
-        android:layout_height="186dp"
-        android:contentDescription="@string/lodging"
-        app:srcCompat="@drawable/lodging2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/ibActivity"
-        android:layout_width="match_parent"
-        android:layout_height="189dp"
-        android:contentDescription="@string/activity"
-        app:srcCompat="@drawable/gandoca" />
+            <ImageButton
+                android:id="@+id/ibRestaurant"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:contentDescription="@string/restaurant"
+                app:srcCompat="@drawable/whereeat" />
+
+            <ImageButton
+                android:id="@+id/ibActivity"
+                android:layout_width="match_parent"
+                android:layout_height="189dp"
+                android:contentDescription="@string/activity"
+                app:srcCompat="@drawable/wherestay" />
+
+            <ImageButton
+                android:id="@+id/ibLodging"
+                android:layout_width="match_parent"
+                android:layout_height="186dp"
+                android:contentDescription="@string/lodging"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/activities" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

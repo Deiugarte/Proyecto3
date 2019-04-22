@@ -59,7 +59,7 @@ public class PlaceDetailsActivity extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mViewPager);
         RequestQueue requestqueue = Volley.newRequestQueue(this);
 
-        String URL = "http://ticoplaces.herokuapp.com/api/v1/places/1";
+        String URL = "https://ticoplaces.herokuapp.com/api/v1/places/" + getIntent().getExtras().getInt("id");
 
         JsonObjectRequest objectRequest = new JsonObjectRequest(
                 Request.Method.GET,
@@ -76,12 +76,11 @@ public class PlaceDetailsActivity extends AppCompatActivity {
                             TextView address = findViewById(R.id.addressTxt);
 
                             name.setText(response.getString("name"));
-                            category.setText("Categoria: " +  ((JSONObject) categories.getJSONObject(0)).getString("name"));
+                            if(categories.length() > 0) {
+                                category.setText("Categoria: " +  ((JSONObject) categories.getJSONObject(0)).getString("name"));
+                            }
                             address.setText("Direccion: " + response.getString("address"));
 
-                            Log.e("REST Response:", response.toString());
-                            Log.e("REST Response:", response.getString("name"));
-                            Log.e("REST Response:", response.getString("categories"));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

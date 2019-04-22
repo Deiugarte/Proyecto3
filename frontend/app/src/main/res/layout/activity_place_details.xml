@@ -14,6 +14,7 @@
         android:id="@+id/fFrame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/wallet_highlighted_text_holo_light"
         android:orientation="vertical">
 
         <ImageView
@@ -31,6 +32,7 @@
             android:layout_height="667dp"
             android:layout_marginTop="10dp"
             android:text="Name"
+            android:textColor="@color/cast_expanded_controller_text_color"
             android:textSize="20dp" />
 
         <TextView
@@ -39,6 +41,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="45dp"
             android:text="Category"
+            android:textColor="@color/cast_expanded_controller_text_color"
             android:textSize="20dp" />
 
         <TextView
@@ -47,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
             android:text="Address"
+            android:textColor="@color/cast_expanded_controller_text_color"
             android:textSize="15dp" />
 
     </FrameLayout>

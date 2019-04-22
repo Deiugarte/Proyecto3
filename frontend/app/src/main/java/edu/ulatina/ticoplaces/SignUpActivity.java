@@ -78,18 +78,19 @@ public class SignUpActivity extends AppCompatActivity {
     public void signUp(String email, String password, String name, String dob, String gender) throws JSONException {
         this.url = getResources().getString(R.string.SERVER_URL) + "/auth";
         JSONObject personalData = new JSONObject()
-                .put("birth", dob)
-                .put("gender", gender);
+                //.put("birth", dob)
+                .put("gender", "male");
         JSONObject data = new JSONObject()
                 .put("email", email )
                 .put("password", password)
                 .put("username", name)
                 .put("person_attributes", personalData);
+        System.out.println(data);
         JsonObjectRequest arrReq = new JsonObjectRequest(Request.Method.POST, url, data,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Intent intent = new Intent(SignUpActivity.this, MapsActivity.class);
+                        Intent intent = new Intent(SignUpActivity.this, Category.class);
                         Bundle bundle = new Bundle();
                         intent.putExtras(bundle);
                         startActivity(intent);

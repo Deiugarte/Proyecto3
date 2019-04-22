@@ -6,18 +6,16 @@
     <item
         android:id="@+id/action_hotel"
         android:enabled="true"
-        android:title="Hotels"
         android:icon="@drawable/ic_hotel_black_24dp"
-        app:showAsAction="collapseActionView"
-        />
+        android:title="Where to Stay"
+        app:showAsAction="collapseActionView" />
 
     <item
         android:id="@+id/action_restaurant"
         android:enabled="true"
-        android:title="Restaurants"
         android:icon="@drawable/ic_restaurant_black_24dp"
-        app:showAsAction="collapseActionView"
-        />
+        android:title="Where to Eat"
+        app:showAsAction="collapseActionView" />
 
     <item
         android:id="@+id/action_other"

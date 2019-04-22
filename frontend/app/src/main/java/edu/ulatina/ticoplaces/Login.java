@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Intent intent = new Intent(Login.this, MapsActivity.class);
+                        Intent intent = new Intent(Login.this, Category.class);
                         Bundle bundle = new Bundle();
                         intent.putExtras(bundle);
                         startActivity(intent);
