@@ -1,10 +1,14 @@
 package edu.ulatina.ticoplaces;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -19,39 +23,80 @@ import android.view.MenuItem;
 
 public class PlaceDetailsActivity extends AppCompatActivity {
 
-//    TabLayout tabLayout = findViewById(R.id.tablayout);
-//    TabItem tabChats = findViewById(R.id.fTab);
-//    TabItem tabStatus = findViewById(R.id.sTab);
-//    TabItem tabCalls = findViewById(R.id.tTab);
-//    ViewPager viewPager = findViewById(R.id.viewPager);
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link FragmentPagerAdapter} derivative, which will keep every
+     * loaded fragment in memory. If this becomes too memory intensive, it
+     * may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+    private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    private ViewPager mViewPager;
+    private TabLayout mTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_details);
 
-//        tabLayout = findViewById(R.id.tablayout);
-//        viewPager = findViewById(R.id.viewPager);
-//        PageAdapter adapter = new PageAdapter(getSupportFragmentManager());
-//        //Adding Fragments
-////        adapter.addFragment(new OverviewFragment(),"Overview");
-////        adapter.addFragment(new PhotosFragment(),"Photos");
-////        adapter.addFragment(new RatingFragment(),"Rating");
-//        //adapter set up
-//        viewPager.setAdapter(adapter);
-//        tabLayout.setupWithViewPager(viewPager);
+        // Create the adapter that will return a fragment for each of the three
+        // primary sections of the activity.
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        mTabLayout = findViewById(R.id.tablayout);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+    class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            Fragment fragment = null;
+            switch (position){
+                case 0:
+                    fragment = OverviewFragment.newInstance();
+                    break;
+                case 1:
+                    fragment = RatingFragment.newInstance();
+                    break;
+                case 2:
+                    fragment = RatingFragment.newInstance();
+                    break;
+            }
+            return fragment;
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 3;
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position){
+                case 0:
+                    return "Overview";
+                case 1:
+                    return "Reviews";
+                case 2:
+                    return "Photos";
+            }
+            return null;
         }
     }
-
 }
