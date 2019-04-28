@@ -66,7 +66,7 @@ public class IntroVideoView extends SurfaceView implements
 
         setLayoutParams(lp);
         mp.setDisplay(getHolder());
-        mp.setLooping(false);
+        mp.setLooping(true);
         mp.start();
     }
 
